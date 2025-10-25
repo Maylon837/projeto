@@ -1,0 +1,200 @@
+@import url(stylecor.css);
+
+body {
+    margin: 0;
+}
+
+.ESG h2 {
+    padding-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.sumario-fixo {
+    position: fixed;
+    left: 0;
+    top: 119px;
+    width: 230px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid rgb(26, 25, 25);
+    border-radius: 3px;
+
+    z-index: 1000;
+}
+
+.sumario-fixo a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.sumario-fixo:hover {
+    border: 3px solid var(--cor-padrao-site);
+}
+
+.sumario-fixo a:hover {
+    color: var(--cor-padrao-site);
+    text-decoration: underline;
+}
+
+.caixas-esg {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui o espaço entre as caixas */
+    margin-top: 40px;
+}
+
+.caixa {
+    flex: 1;
+    margin: 0 7px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex-direction: column;
+    flex: none;
+    width: 300px;
+    cursor: pointer;
+    transition: 0, 3s;
+
+}
+
+.caixa h2 {
+    text-align: center;
+}
+
+.caixa:hover {
+    transform: scale(1.01);
+    background-color: #f0f0f0;
+
+
+}
+
+@media (max-width: 768px) {
+    .caixas-esg {
+        flex-direction: column;
+    }
+}
+
+.imagem-principal {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.conclusao {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.container-objetivo {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.coluna-imagem {
+    flex: 1;
+    /* Ocupa 50% da largura disponível */
+}
+
+.coluna-texto {
+    flex: 1;
+    /* Ocupa os outros 50% da largura disponível */
+}
+
+.coluna-imagem img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 4. Opcional: Empilha em telas pequenas */
+@media (max-width: 768px) {
+    .container-objetivo {
+        flex-direction: column;
+        /* Empilha as colunas verticalmente */
+        gap: 0;
+    }
+}
+
+.divisor-padrao {
+    border: none;
+    border-top: 5px solid var(--cor-padrao-site);
+    width: 100%;
+    margin: 20px auto;
+}
+
+.unic {
+    font-size: 13px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--cor-padrao-site);
+
+}
+
+main {
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+}
+
+main h1 {
+    text-align: center;
+    color: rgb(51, 153, 20);
+    font-size: 45px;
+}
+
+main h2 {
+    font-size: 30px;
+    color: var(--cor-padrao-site);
+}
+
+main p {
+    font-size: 17px;
+
+}
+
+.cadastro {
+    border: 2px solid black;
+    border-radius: 17px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.cadastro a {
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+
+}
+
+.esteregg {
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+
+}

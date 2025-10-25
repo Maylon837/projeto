@@ -6,157 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CM.ESG</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        @import url(stylecor.css);
 
-        body {
-            margin: 0;
-        }
-
-        .ESG h2 {
-            padding-right: 10px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 100px;
-            width: auto;
-        }
-
-        .sumario-fixo {
-            position: fixed;
-            left: 0;
-            top: 200px;
-            width: 230px;
-            background-color: #fff;
-            padding: 15px;
-            border: 1px solid rgb(26, 25, 25);
-            border-radius: 3px;
-
-            z-index: 1000;
-        }
-
-        .sumario-fixo a {
-            color: #333333;
-            text-decoration: none;
-            font-weight: normal;
-        }
-
-        .sumario-fixo a:hover {
-            color: var(--cor-padrao-site);
-            text-decoration: underline;
-        }
-
-        .caixas-esg {
-            display: flex;
-            justify-content: space-between;
-            /* Distribui o espaço entre as caixas */
-            margin-top: 40px;
-        }
-
-        .caixa {
-            flex: 1;
-            margin: 0 7px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-            flex-direction: column;
-            flex: none;
-            width: 300px;
-            cursor: pointer;
-            transition: 0, 3s;
-
-        }
-
-        .caixa h2 {
-            text-align: center;
-        }
-
-        .caixa:hover {
-            transform: scale(1.01);
-            background-color: #f0f0f0;
-
-
-        }
-
-        @media (max-width: 768px) {
-            .caixas-esg {
-                flex-direction: column;
-            }
-        }
-
-        .imagem-principal {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .divisor-padrao {
-            border: none;
-            border-top: 5px solid var(--cor-padrao-site);
-            width: 100%;
-            margin: 20px auto;
-        }
-
-        .unic {
-            font-size: 13px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 45px;
-            background-color: var(--cor-padrao-site);
-
-        }
-
-        main {
-            max-width: 800px;
-            padding: 0 20px;
-            margin: 0 auto;
-
-        }
-
-        main h1 {
-            text-align: center;
-            color: rgb(51, 153, 20);
-            font-size: 45px;
-        }
-
-        main h2 {
-            font-size: 30px;
-            color: var(--cor-padrao-site);
-        }
-
-        main p {
-            font-size: 17px;
-
-        }
-
-        .cadastro {
-            border: 2px solid black;
-            border-radius: 17px;
-            background-color: rgb(255, 255, 255);
-            color: black;
-            text-align: center;
-            padding: 5px;
-            
-        }
-
-        .cadastro a {
-            text-decoration: none;
-            font-weight: normal;
-            color: black;
-
-        }
-    </style>
 </head>
 
 <body>
@@ -165,7 +15,7 @@
             <img src="imagens/logo.png" alt="Logo CM ESG">
         </div>
         <nav>
-            <ul class="cadastro" >
+            <ul class="cadastro">
                 <a href="cadastro.html">Cadastro</a>
             </ul>
         </nav>
@@ -178,8 +28,8 @@
             <li><a href="#Introdução">Introdução</a></li>
             <li><a href="#O_que_e_esg">O que é ESG</a></li>
             <li><a href="#ESG_sigla">ESG sigla</a></li>
-            <li><a href="#Objetivo_do_esg">Objetivo do ESG</a></li>
             <li><a href="#Aplicando">Aplicando o ESG na prática</a></li>
+            <li><a href="#Objetivo_do_esg">Objetivo do ESG</a></li>
             <li><a href="#beneficio">Benefícios para as empresas</a></li>
             <li><a href="#conclusao">Conclusão</a></li>
         </ol>
@@ -279,18 +129,8 @@
 
         </div>
 
-        <h2 id="Objetivo_do_esg">Objetivo do ESG</h2>
-        <p>O principal objetivo do ESG é promover o desenvolvimento
-            sustentável nas organizações, integrando fatores ambientais,
-            sociais e de governança às estratégias de gestão.
-            A proposta é incentivar empresas a atuarem de forma
-            responsável, transparente e equilibrada, conciliando
-            resultados econômicos com o respeito ao meio ambiente e à
-            sociedade.</p>
-        <p>Com isso, o ESG contribui para a longevidade dos negócios, o
-            fortalecimento da reputação corporativa e o impacto positivo
-            na comunidade e no planeta.</p>
 
+        </div>
         <h2 id="Aplicando">Aplicando o ESG na prática</h2>
         <p>Implementar o ESG requer planejamento ecomprometimento, mas pode ser feito de maneira gradual.</p>
         <ol>
@@ -320,6 +160,25 @@
             sustentável, fortalecendo sua cultura organizacional e
             mostrando compromisso com a responsabilidade social e
             ambiental.</p>
+        <div class="container-objetivo">
+
+            <section class="coluna-texto">
+                <h2 id="Objetivo_do_esg">Objetivo do ESG</h2>
+                <p>O principal objetivo do ESG é promover o desenvolvimento
+                    sustentável nas organizações, integrando fatores ambientais,
+                    sociais e de governança às estratégias de gestão.
+                    A proposta é incentivar empresas a atuarem de forma
+                    responsável, transparente e equilibrada, conciliando
+                    resultados econômicos com o respeito ao meio ambiente e à
+                    sociedade.</p>
+                <p>Com isso, o ESG contribui para a longevidade dos negócios, o
+                    fortalecimento da reputação corporativa e o impacto positivo
+                    na comunidade e no planeta.</p>
+            </section>
+            <section class="coluna-imagem">
+                <img src="imagens/objetivo.png" alt="" class="image-objetivo">
+            </section>
+        </div>
 
         <h2 id="beneficio">Benefícios para as empresas</h2>
         <p>Empresas que investem em boas práticas ESG facilitam o
@@ -327,7 +186,7 @@
             reduzir custos operacionais.</p>
         <p>Nos últimos anos, a sigla ESG (Ambiental, Social e
             Governança) tornou-se um pilar essencial para empresas
-            que buscam não apenas prosperar financeiramente, mas
+            que <a href="esteregg.html" class="esteregg">buscam</a> não apenas prosperar financeiramente, mas
             também contribuir positivamente para a sociedade e o meio
             ambiente.</p>
         <P>Estudos recentes mostram que empresas que implementam
@@ -338,18 +197,20 @@
             eficientes, inovadoras e resilientes frente às mudanças do
             mercado.</P>
 
-        <h2 id="conclusao">Conclusão</h2>
-        <p>O ESG representa uma nova forma de pensar o papel das
-            empresas na sociedade.
-            Mais do que uma tendência global, é uma estratégia
-            essencial para garantir crescimento sustentável,
-            transparência e responsabilidade corporativa.</p>
-        <p>Ao integrar os pilares ambiental, social e de governança, as
-            organizações assumem o compromisso de gerar valor não
-            apenas econômico, mas também humano e ambiental.
-            Adotar o ESG é investir em um futuro mais ético, equilibrado
-            e sustentável — para as empresas, para as pessoas e para o
-            planeta.</p>
+            
+            <img src="imagens/conclusao.png" alt="" class="conclusao">
+            <h2 id="conclusao">Conclusão</h2>
+            <p>O ESG representa uma nova forma de pensar o papel das
+                empresas na sociedade.
+                Mais do que uma tendência global, é uma estratégia
+                essencial para garantir crescimento sustentável,
+                transparência e responsabilidade corporativa.</p>
+                <p>Ao integrar os pilares ambiental, social e de governança, as
+                    organizações assumem o compromisso de gerar valor não
+                    apenas econômico, mas também humano e ambiental.
+                    Adotar o ESG é investir em um futuro mais ético, equilibrado
+                    e sustentável — para as empresas, para as pessoas e para o
+                    planeta.</p>
     </main>
 
     <footer> </footer>

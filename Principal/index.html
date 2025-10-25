@@ -1,41 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CM.ESG</title>
     <link rel="stylesheet" href="style.css">
-<style>
-body {
-    margin: 0;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 45px;
-    background-color: #678;
-}
-main {
-    max-width: 800px;
-    padding: 0 20px;
-    margin: 0 auto;
+    <style>
+        @import url(stylecor.css);
 
-}
-</style>
+        body {
+            margin: 0;
+        }
+
+        .ESG h2 {
+            padding-right: 10px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100px;
+            width: auto;
+        }
+
+        .sumario-fixo {
+            position: fixed;
+            left: 0;
+            top: 200px;
+            width: 200px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid rgb(26, 25, 25);
+            border-radius: 3px;
+            
+            z-index: 1000;
+        }
+
+        .caixas-esg {
+            display: flex;
+            justify-content: space-between;
+            /* Distribui o espaço entre as caixas */
+            margin-top: 40px;
+        }
+
+        .caixa {
+            flex: 1;
+            margin: 0 7px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            flex-direction: column;
+            flex: none;
+            width: 300px;
+            cursor: pointer;
+            transition: 0, 3s;
+
+        }
+
+        .caixa h2 {
+            text-align: center;
+        }
+
+        .caixa:hover {
+            transform: scale(1.01);
+            background-color: #f0f0f0;
+
+
+        }
+
+        @media (max-width: 768px) {
+            .caixas-esg {
+                flex-direction: column;
+            }
+        }
+
+        .imagem-principal {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .divisor-padrao {
+            border: none;
+            border-top: 5px solid var(--cor-padrao-site);
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        .unic {
+            font-size: 13px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 45px;
+            background-color: var(--cor-padrao-site);
+
+        }
+
+        main {
+            max-width: 800px;
+            padding: 0 20px;
+            margin: 0 auto;
+
+        }
+
+        main h1 {
+            text-align: center;
+            color: rgb(51, 153, 20);
+            font-size: 45px;
+        }
+
+        main h2 {
+            font-size: 30px;
+            color: var(--cor-padrao-site);
+        }
+
+        main p {
+            font-size: 17px;
+
+        }
+    </style>
 </head>
+
 <body>
     <header>
-
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo CM ESG">
+        </div>
 
     </header>
 
+    <nav class="sumario-fixo">
+        <h3>Índice</h3>
+        <ol>
+            <li><a href="#Introdução">Introdução</a></li>
+            <li><a href="#O_que_e_esg">O que é ESG</a></li>
+            <li><a href="#ESG_sigla">ESG sigla</a></li>
+            <li><a href="#Objetivo_do_esg">Objetivo do ESG</a></li>
+            <li><a href="#Aplicando">Aplicando o ESG na prática</a></li>
+            <li><a href="#beneficio">Benefícios para as empresas</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+        </ol>
+    </nav>
+
     <main class="content-container">
-        <p>Seu texto aqui...</p>
-        <h1>Título</h1>
-        </main>
-    
-    <footer>
-        </footer>
+        <br>
+        <br>
+        <img src="imagens/principal.png" alt="" class="imagem-principal">
+        <h1>ESG: Ambiental, Social e Governança</h1>
+        <br>
+        <br>
+        <br>
+        <h2 id="Introdução">Introdução</h2>
+        <p>Nas últimas décadas, a preocupação com a sustentabilidade
+            e a responsabilidade corporativa vem ganhando espaço em
+            todo o mundo. Nesse contexto, o conceito de ESG
+            (Ambiental, Social e Governança) tem se consolidado como
+            um dos principais indicadores de comprometimento das
+            empresas com práticas éticas e sustentáveis.
+            A adoção de critérios ESG está crescendo de forma
+            significativa, tanto no mercado internacional quanto no
+            Brasil, impulsionada por investidores, consumidores e
+            instituições que valorizam negócios mais conscientes. No
+            cenário brasileiro, cada vez mais organizações estão
+            incorporando estratégias voltadas à sustentabilidade
+            ambiental, à inclusão social e à governança transparente,
+            tornando o ESG um diferencial competitivo e um requisito
+            para a perenidade das empresas.</p>
+        <hr class="divisor-padrao">
+        <br>
+        <br>
+        <br>
+        <h2 id="O_que_e_esg">O que é ESG</h2>
+        <p>ESG significa Environmental, Social and Governance — em
+            português, Ambiental, Social e Governança.</p>
+        <p>Essa sigla é usada para avaliar o quanto uma empresa está
+            comprometida com práticas sustentáveis e responsáveis em
+            três dimensões: meio ambiente, sociedade e gestão
+            corporativa.</p>
+        <p>O conceito de ESG ganhou força globalmente por reunir
+            fatores que indicam como uma organização se posiciona
+            diante dos desafios sociais e ambientais, alinhando suas
+            ações aos Objetivos de Desenvolvimento Sustentável (ODS)
+            propostos pela ONU.</p>
+        <p class="unic">*Os ODS são 17 metas criadas pela ONU para promover
+            um mundo mais justo, sustentável e equilibrado até 2030.
+        </p>
+        <p>Mais do que um conjunto de regras, o ESG representa uma
+            mudança de mentalidade empresarial, em que o lucro é
+            buscado de forma ética, equilibrada e em harmonia com o
+            meio ambiente e a sociedade.</p>
+        <div>
+            <h2 class="ESG">ESG Sigla</h2>
+        </div>
+
+        <div class="caixas-esg">
+
+            <section class="caixa">
+                <h2 id="ESG_sigla">Ambiental</h2>
+                <ul>
+                    <li>Mudanças climáticas</li>
+                    <li>Emissões de carbono</li>
+                    <li>Poluição do ar e da água</li>
+                    <li>Consumo e uso responsável da energia</li>
+                    <li>Gestão de resíduos</li>
+                    <li>Embalagens sustentáveis</li>
+                    <li>Biodiversidade</li>
+                    <li>Desmatamento</li>
+                </ul>
+            </section>
+
+            <section class="caixa">
+                <h2>Social</h2>
+                <ul>
+                    <li>Práticas justas de trabalho</li>
+                    <li>Engajamento e bem-estar dos colaboradores</li>
+                    <li>Relacionamento com a comunidade</li>
+                    <li>Responsabilidade com produtos e serviços</li>
+                    <li>Privacidade e proteção de dados</li>
+                    <li>Diversidade e inclusão (raça, gênero, renda, território)</li>
+                    <li>Direitos humanos</li>
+                </ul>
+            </section>
+
+            <section class="caixa">
+                <h2>Governança</h2>
+                <ul>
+                    <li>Políticas de conselho e liderança</li>
+                    <li>Códigos de conduta e combate à corrupção</li>
+                    <li>Engajamento e comunicação interna</li>
+                    <li>Políticas fiscais e financeiras</li>
+                    <li>Ouvidoria e canais de denúncia</li>
+                    <li>Transparência e ética corporativa</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <h2 id="Objetivo_do_esg">Objetivo do ESG</h2>
+        <p>O principal objetivo do ESG é promover o desenvolvimento
+            sustentável nas organizações, integrando fatores ambientais,
+            sociais e de governança às estratégias de gestão.
+            A proposta é incentivar empresas a atuarem de forma
+            responsável, transparente e equilibrada, conciliando
+            resultados econômicos com o respeito ao meio ambiente e à
+            sociedade.</p>
+        <p>Com isso, o ESG contribui para a longevidade dos negócios, o
+            fortalecimento da reputação corporativa e o impacto positivo
+            na comunidade e no planeta.</p>
+
+        <h2 id="Aplicando">Aplicando o ESG na prática</h2>
+        <p>Implementar o ESG requer planejamento ecomprometimento, mas pode ser feito de maneira gradual.</p>
+        <ol>
+            <li>Diagnóstico: comece observando o que a empresa já faz
+                nas áreas ambiental, social e de gestão. Isso ajuda a
+                entender o que está funcionando e o que precisa melhorar.</li>
+            <li>Definição de metas: estabeleça objetivos claros, como
+                reduzir o consumo de energia, melhorar as condições de
+                trabalho ou adotar políticas mais transparentes.</li>
+            <li>Planejamento de ações: pense em iniciativas que
+                envolvam toda a equipe — por exemplo, campanhas de
+                reciclagem, treinamentos de inclusão ou criação de um
+                código de ética.</li>
+            <li>Monitoramento e transparência: acompanhe os
+                resultados, comunique as ações realizadas e mostre os
+                avanços de forma aberta e honesta.</li>
+        </ol>
+        <h3>Como comprovar a adoção do ESG:</h3>
+        <p>Embora não exista um único “certificado ESG” que sirva para
+            todas as empresas, o mercado exige provas reais das
+            práticas adotadas.</p>
+        <p>Essa comprovação é feita por meio de relatórios
+            transparentes e pela busca de certificações e selos
+            específicos, que validam o compromisso da empresa com os
+            pilares Ambiental, Social e de Governança.</p>
+        <p>Com esses passos, a empresa dá início a uma jornada
+            sustentável, fortalecendo sua cultura organizacional e
+            mostrando compromisso com a responsabilidade social e
+            ambiental.</p>
+
+        <h2 id="beneficio">Benefícios para as empresas</h2>
+        <p>Empresas que investem em boas práticas ESG facilitam o
+            caminho para atrair investimentos, fortalecer sua marca e
+            reduzir custos operacionais.</p>
+        <p>Nos últimos anos, a sigla ESG (Ambiental, Social e
+            Governança) tornou-se um pilar essencial para empresas
+            que buscam não apenas prosperar financeiramente, mas
+            também contribuir positivamente para a sociedade e o meio
+            ambiente.</p>
+        <P>Estudos recentes mostram que empresas que implementam
+            práticas de ESG eficazes não apenas se destacam no
+            mercado, mas também constroem uma reputação sólida e
+            uma base de clientes fiéis. Além de melhorar sua imagem
+            perante clientes e parceiros, essas empresas tornam-se mais
+            eficientes, inovadoras e resilientes frente às mudanças do
+            mercado.</P>
+
+        <h2 id="conclusao">Conclusão</h2>
+        <p>O ESG representa uma nova forma de pensar o papel das
+            empresas na sociedade.
+            Mais do que uma tendência global, é uma estratégia
+            essencial para garantir crescimento sustentável,
+            transparência e responsabilidade corporativa.</p>
+        <p>Ao integrar os pilares ambiental, social e de governança, as
+            organizações assumem o compromisso de gerar valor não
+            apenas econômico, mas também humano e ambiental.
+            Adotar o ESG é investir em um futuro mais ético, equilibrado
+            e sustentável — para as empresas, para as pessoas e para o
+            planeta.</p>
+    </main>
+
+    <footer> </footer>
 </body>
+
 </html>

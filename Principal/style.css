@@ -176,19 +176,27 @@ main p {
 }
 
 .cadastro {
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 17px;
     background-color: rgb(255, 255, 255);
     color: black;
     text-align: center;
     padding: 5px;
-
+    transition: all 0.3s ease-in-out;
 }
 
 .cadastro a {
     text-decoration: none;
     font-weight: normal;
     color: black;
+
+}
+
+.cadastro:hover {
+    background-color: rgb(147, 175, 231);
+    transform: scale(1.05);
+    color: var(--cor-padrao-site);
+    border: 2px solid var(--cor-padrao-site);
 
 }
 

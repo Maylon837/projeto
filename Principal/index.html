@@ -31,13 +31,24 @@
             position: fixed;
             left: 0;
             top: 200px;
-            width: 200px;
+            width: 230px;
             background-color: #fff;
             padding: 15px;
             border: 1px solid rgb(26, 25, 25);
             border-radius: 3px;
-            
+
             z-index: 1000;
+        }
+
+        .sumario-fixo a {
+            color: #333333;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .sumario-fixo a:hover {
+            color: var(--cor-padrao-site);
+            text-decoration: underline;
         }
 
         .caixas-esg {
@@ -128,6 +139,23 @@
             font-size: 17px;
 
         }
+
+        .cadastro {
+            border: 2px solid black;
+            border-radius: 17px;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            text-align: center;
+            padding: 5px;
+            
+        }
+
+        .cadastro a {
+            text-decoration: none;
+            font-weight: normal;
+            color: black;
+
+        }
     </style>
 </head>
 
@@ -136,6 +164,11 @@
         <div class="logo">
             <img src="imagens/logo.png" alt="Logo CM ESG">
         </div>
+        <nav>
+            <ul class="cadastro" >
+                <a href="cadastro.html">Cadastro</a>
+            </ul>
+        </nav>
 
     </header>
 

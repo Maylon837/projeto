@@ -1,0 +1,36 @@
+@import url(stylecor.css);
+
+body {
+    background-image: url('../IMAGENS/fundo.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.caixa {
+    border: 3px solid black;
+    padding: 20px;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 5px;
+    width: 250px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.caixa h2 {
+    text-align: center;
+    color: var(--cor-padrao-site);
+}
+
+div {
+    padding-top: 200px;
+}
+
+input {
+    border: 1px solid black;
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+}

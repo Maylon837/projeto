@@ -1,4 +1,4 @@
-@import url(stylecor.css);
+@import url(cor.css);
 
 
 body {
@@ -95,6 +95,7 @@ main h1 {
 main h2 {
     font-size: 40px;
     color: var(--cor-titulos);
+    margin: 0px;
 
 }
 
@@ -104,99 +105,71 @@ main p {
     line-height: 1.3;
 }
 
+
+/*CORPO MAIN*/
+/*introdução*/
+.imagem-principal {
+    max-width: 100%;
+    margin-top: 13px;
+}
+
 .p-unico {
     font-size: 17px;
     letter-spacing: 1px;
 }
 
 
-/*CORPO MAIN*/
-.imagem-principal {
-    max-width: 100%;
-    margin-top: 13px;
-}
-
-.divisor-padrao {
-    border: none;
-    border-top: 5px solid var(--cor-linha-divisao);
-    width: 100%;
-    margin: 50px auto;
-}
-
-
-.caixas-esg {
-    display: flex;
-    justify-content: space-between;
-    /* Distribui o espaço entre as caixas */
-    margin-top: 40px;
-}
-
-.caixa {
-    flex: 1;
-    margin: 0 7px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    flex-direction: column;
-    flex: none;
-    width: 300px;
-    cursor: pointer;
-    transition: 0, 3s;
-
-}
-
-.caixa h2 {
-    text-align: center;
-}
-
-.caixa:hover {
-    transform: scale(1.01);
-    background-color: #f0f0f0;
-
-
-}
-
-/*caixas*/
-@media (max-width: 768px) {
-    .caixas-esg {
-        flex-direction: column;
-    }
-}
-
-.container-objetivo {
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    gap: 30px;
-}
-
-/* 4. Opcional: Empilha em telas pequenas */
-@media (max-width: 768px) {
-    .container-objetivo {
-        flex-direction: column;
-        /* Empilha as colunas verticalmente */
-        gap: 0;
-    }
-}
-
-.coluna-texto {
-    flex: 1;
-    /* Ocupa os outros 50% da largura disponível */
-}
-
-.coluna-imagem {
-    flex: 1;
-    /* Ocupa 50% da largura disponível */
-}
-
-.coluna-imagem img {
-    max-width: 100%;
-    height: auto;
+/*os 3 pilares*/
+.imagem-pilares {
     display: block;
+    margin: 20px auto;
+    width: 60%;
+    border: 1px solid var(--cor-linha-divisao);
 }
 
+.lista-pilares {
+    padding: 20px 25px;
+    margin: 20px 0px;  
+}
+
+.lista-pilares li {
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    padding: 7px 0px;
+}
+
+
+/*ESG na prática*/
+.lista-praticas {
+    padding: 20px 25px;
+    margin: 20px 0px; 
+}
+
+.lista-praticas li {
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    padding: 7px 0px;
+}
+
+
+/*objetivo do esg*/
+.container-objetivo {
+    max-width: 900px;
+    margin: auto;
+    padding: 5px 0px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.img-objetivo {
+    float: right;  /* faz a imagem ir para o canto superior direito. */
+    width: 50%; /* ajuste o tamanho conforme quiser */
+    margin: 0 0 0px 10px; /* espaço entre imagem e texto */
+    
+}
+
+
+/*conclusão*/
 .conclusao {
     max-width: 70%;
     height: auto;
@@ -204,5 +177,36 @@ main p {
     margin: 0 auto;
 }
 
+/*divisor das partes*/
+.divisor-padrao {
+    border: none;
+    border-top: 7px solid var(--cor-linha-divisao);
+    width: 100%;
+    margin: 35px 0px;
+}
 
+.divisor-pilares {
+    border: none;
+    border-top: 2px solid var(--cor-linha-divisao);
+    width: 100%;
+    margin: 25px 0px;
+}
+
+
+/*RESPONSIVIDADE*/
+/*caixas*/
+@media (max-width: 768px) {
+    .caixas-esg {
+        flex-direction: column;
+    }
+}
+
+/*textos */
+@media (max-width: 768px) {
+    .container-objetivo {
+        flex-direction: column;
+        /* Empilha as colunas verticalmente */
+        gap: 0;
+    }
+}
 

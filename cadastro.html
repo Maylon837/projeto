@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CM.cadastro</title>
-    <link rel="stylesheet" href="estilos/cadastro.css">
-
+    <title>Cadastro ou Login</title>
+    <link rel="stylesheet" href="./estilos/home.css">
 </head>
-
 <body>
-    <main>
-        <div>
-            <section class="caixa">
-                <h2>Cadastro</h2>
-                <label for="">Digite seu nome</label>
-                <input type="text">
-                
-                <label for="">Digite seu e-mail</label>
-                <input type="email">
-               
-            </section>
-        </div>
-    </main>
+    
+    <section>
+        <h2>Cadastro</h2>
 
+        <form action="">
+            
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+            
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="sobrenome">
+            
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email">
+            
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha">
+            
+            <input type="submit" name="Enviar" id="Enviar">
+            
+        </form>
+    </section>
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email-login">
+
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha-login">
+
+            <input type="submit" name="Enviar" id="Enviar-login">
+    <section>
+
+        <form action=""></form>
+    </section>
 </body>
-
 </html>

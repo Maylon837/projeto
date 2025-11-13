@@ -1,19 +1,28 @@
 @import url(cor.css);
-
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
 
 body {
     margin: 0 1px;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-family: Figtree, "Arial";
+}
+
 /*CABECALHO*/
 header {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    background-color: var(--cor-padrao-site);
     justify-content: space-between;
+    position: fixed;
+    display: flex;
     align-items: center;
+    width: 100%;
     z-index: 100; /* garante que o cabeçalho fique acima do outros elementos*/
+    background-color: var(--cor-padrao-site);
     
 }
 
@@ -30,121 +39,90 @@ header {
 .cadastro {
     margin: 0px 20px;
     border-radius: 10px;
-    padding: 7px 15px;
-    background-color: rgb(252, 252, 252);
+    padding: 3px 15px;
+    background-color: var(--cor-fundo-botao-cadastro);
 
 }
 
 .cadastro a {
-    text-decoration: none;
-    color: var(--cor-botao-titulo);
     letter-spacing: 1px;
+    text-decoration: none;
     font-size: 1em;
+    color: var(--cor-botao-titulo);
+    font-family: Figtree, "Arial";
 }
 
 .cadastro:hover {
-    background-color: rgb(103, 196, 152);
-}
-
-
-
-/* INDICE CABECALHO*/
-/* ARRUMAR O BOTAO COLOCANDO A ESQUERDA AO LADO DA LOGO. ARRUMAR OS INDICES QUE ESTÃO UM AO LADO DO OUTRO EM VEZ DE ESTAR EMBAIXO. */
-.indice-navegacao ul {
-    list-style: none; /*limpa os marcadores de lista ul*/
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-.item-indice {
-    position: relative;
-}
-
-.botao-indice {
-    display: block;
-    padding: 7px 15px;
-    text-decoration: none;
-    border-radius: 10px;
-    background-color: rgb(252, 252, 252);
-    text-decoration: none;
-    color: var(--cor-botao-titulo);
-    font-size: 1.2em;
-    letter-spacing: 1px;
-}
-
-.painel-indice {
-    /* Propriedades para esconder o menu */
-    display: none;
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    min-width: 250px; 
-    background-color: #212121; /* Fundo escuro */
-    z-index: 20; 
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
-   
-}
-
-.painel-indice li a {
-    color: white; 
-    padding: 12px 15px;
-    display: block;
-}
-
-.painel-indice li a:hover {
-    background-color: #333;
-}
-
-/* REGRA CHAVE SEM JS: MOSTRAR AO PASSAR O MOUSE */
-.item-indice:hover > .painel-indice {
-    display: block;
-}
-
-/* Estilo de destaque do botão quando o menu está aberto */
-.item-indice.ativo > .botao-indice {
-    background-color: #212121;
-    color: white;
+    background-color: rgb(195, 240, 219);
 }
 
 
 /*SUMARIO FIXO*/
-.sumario-fixo {
+#indice-lateral {
     position: fixed;
-    top: 135px;
-    width: 270px;
-    padding: 12px;
-    background-color: var(--cor-fundo-sumario);
-    border: 4px solid var(--cor-padrao-site);
-    border-radius: 3px;
-
+    top: 50px;
+    left: 0;
+    width: 360px;
+    padding: 10px ;
+    margin-top: 70px;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid var(--cor-padrao-site);
+    background-color: var(--cor-fundo-indice);
 }
 
-.sumario-fixo h3 {
-    font-size: 2.2em;
-    margin: 20px 30px;
-    text-align: left;
-    color: var(--cor-titulos);
+#conteudo-indice {
+    padding: 10px;
 }
 
-.sumario-fixo li{
-    padding-top: 15px;
-
+#conteudo-indice ul {
+    padding: 0px 25px;
+    text-align: center;
 }
 
-.sumario-fixo a {
+#conteudo-indice h1 {
+    font-family: PT Serif,"Arial";
+    text-align: center;
+    font-size: 40px;
+    margin: 10px;
+    padding-top: 20px;
+    letter-spacing: 2px;
+    text-decoration: underline 3px;
+    
+}
+
+#conteudo-indice a {
+    text-decoration: none;
     font-size: 20px;
     letter-spacing: 1px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+    line-height: 1.7;
+    color: black;
 }
 
-.sumario-fixo a:hover {
-    color: #04991d;
-    text-decoration: underline;
+#conteudo-indice a:hover {
+    background-color: rgb(173, 173, 173);
+    font-style: italic;
 }
 
+.indice-fechado {
+    /* esconde a maior parte, e deixa o botão a vista */
+    transform: translateX(calc(-110% + 35px));
+}
 
+#btn-alternar {
+    position: absolute;
+    top: 0;
+    right: -35px;
+    width: 35px;
+    height: 100%;
+    border: none;
+    padding: 0;
+    font-size: 3em;
+    cursor: pointer;
+    background-color: var(--cor-btn-indice);
+    color: rgb(255, 255, 255);
+
+}
 
 
 /*MAIN*/
@@ -155,18 +133,22 @@ main {
 
 main h1 {
     text-align: center;
+    letter-spacing: 4px;
     color: var(--cor-titulos);
-    font-size: 45px;
+    font-size: 50px;
+    font-family: PT Serif,"Arial";
 }
 
 main h2 {
-    font-size: 40px;
+    font-size: 45px;
+    letter-spacing: 4px;
     color: var(--cor-titulos);
     margin: 0px;
-
+    font-family: PT Serif,"Arial";
 }
 
 main p {
+    font-family: Figtree, "Arial";
     font-size: 1.3em;
     letter-spacing: 1px;
     line-height: 1.3;
@@ -177,7 +159,7 @@ main p {
 /*introdução*/
 .imagem-principal {
     max-width: 100%;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .p-unico {
@@ -189,25 +171,27 @@ main p {
 /*os 3 pilares*/
 .imagem-pilares {
     display: block;
-    margin: 20px auto;
     width: 60%;
-    border: 1px solid var(--cor-linha-divisao);
+    margin: 20px auto;
+
 }
 
 .lista-pilares {
-    padding: 20px 25px;
+    padding: 15px 20px;
     margin: 20px 0px;  
 }
 
 .lista-pilares li {
     letter-spacing: 1px;
     font-size: 1.2em;
-    padding: 7px 0px;
+    padding: 9px 0px;
 }
 
 .lista-pilares strong {
     color: var(--cor-titulos);
+    font-size: 1.1em;
 }
+
 
 /*ESG na prática*/
 .lista-praticas {
@@ -272,13 +256,13 @@ main p {
     left: 0;
     width: 100%;
     height: 5px;
-    background: grey;
+    background: var(--cor-fundo-linha-progresso);
     z-index: 9999;
 }
 
 #progressoBarra {
     height: 5px;
-    background: #04991d;
+    background: var(--cor-progresso-barra);
     width: 0%;
     transition: width 0.1s ease-out;  /* adiciona um movimento, uma transição*/
 }
@@ -290,44 +274,11 @@ footer {
     width: 100%;
     margin-top: 100px;
     padding: 35px 0px;
-    background-color: var(--cor-padrao-site);
+    background-color: var(--cor-rodape);
     color: white;
+    font-family: Figtree, "Arial";
 }
 
-.botao-sobre > button {
-    margin: 0 15px;
-    padding: 6px 6px;
-    border-radius: 8px;
-    border: white;
+.direitos {
+    text-align: center;
 }
-
-.botao-sobre a {
-    text-decoration: none;
-    color: white;
-}
-
-.botao-sobre 
-.direitos{
-    padding: 30px;
-}
-
-/*  
-.cadastro {
-    margin: 0px 20px;
-    border-radius: 10px;
-    padding: 7px 15px;
-    background-color: rgb(252, 252, 252);
-
-}
-
-.cadastro a {
-    text-decoration: none;
-    color: var(--cor-botao-titulo);
-    letter-spacing: 1px;
-    font-size: 1.2em;
-}
-
-.cadastro:hover {
-    background-color: rgb(103, 196, 152);
-}
-*/

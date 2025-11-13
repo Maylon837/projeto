@@ -17,30 +17,11 @@
 
     <header>
         <div class="logo">
-            <img src="IMAGENS/logo (2).png" alt="Logo CM ESG">
+            <a href="index.html">
+                <img src="IMAGENS/logo (2).png" alt="Logo CM ESG" href="#index.html">
+            </a>
         </div>
 
-<!-- sumario2 
-        <nav class="indice-navegacao">
-            <ul>
-                <li class="item-indice" id="menuIndice">
-                    <a href="#" class="botao-indice">Índices <span class="icone-seta">▼</span></a>
-                
-                    <ul class="painel-indice">
-                        <li><a href="#Introdução">Introdução</a>
-                        <li><a href="#O_que_e_esg">O que é ESG</a></li>
-                        <li><a href="#ESG_sigla">ESG sigla</a></li>
-                        <li><a href="#Aplicando">ESG na prática</a></li>
-                        <li><a href="#Objetivo_do_esg">Objetivo do ESG</a></li>
-                        <li><a href="#beneficio">Benefícios para as empresas</a></li>
-                        <li><a href="#conclusao">Conclusão</a></li>
-                    </ul>      
-
-                </li>
-            </ul>
-
-        </nav>
-        -->
         <nav>
             <ul class="cadastro">
                 <a href="cadastro.html">CADASTRO</a>
@@ -49,30 +30,35 @@
 
     </header>
     
+    <div id="indice-lateral" class="indice-fechado">
+        <button id="btn-alternar" onclick="alternarVisivel()">
+            &raquo;
+        </button>
 
-
-    <nav class="sumario-fixo">
-        <h3>Índice</h3>
-        <ul>
-            <li><a href="#Introdução">Introdução</a>
-            <li><a href="#O_que_e_esg">O que é ESG</a></li>
-            <li><a href="#ESG_sigla">ESG sigla</a></li>
-            <li><a href="#Aplicando">ESG na prática</a></li>
-            <li><a href="#Objetivo_do_esg">Objetivo do ESG</a></li>
-            <li><a href="#beneficio">Benefícios para as empresas</a></li>
-            <li><a href="#conclusao">Conclusão</a></li>
-        </ul>
-    </nav>
- 
+        <div id="conteudo-indice">
+            <h1>Índice</h1>
+            <ul>
+                <li><a href="#Introdução">Introdução</a></li>
+                <li><a href="#O_que_e_esg">O que é ESG</a></li>
+                <li><a href="#ESG_sigla">ESG sigla</a></li>
+                <li><a href="#Aplicando">ESG na prática</a></li>
+                <li><a href="#Objetivo_do_esg">Objetivo do ESG</a></li>
+                <li><a href="#beneficio">Benefícios para as empresas</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+        </div>
+    </div>
 
     <main>
         
         <img src="IMAGENS/principal.png" alt="Imagem principal" class="imagem-principal">
         <h1>ESG: Ambiental, Social e Governança</h1>
 
-        <hr class="divisor-padrao">
+
+        <hr class="divisor-padrao" id="Introdução">
         
-        <h2 id="Introdução">Introdução</h2>
+
+        <h2>Introdução</h2>
 
         <p>Nas últimas décadas, a preocupação com a sustentabilidade
         e a responsabilidade corporativa vem ganhando espaço em
@@ -91,10 +77,11 @@
         para a perenidade das empresas.
         </p>
         
-        <hr class="divisor-padrao">
+
+        <hr class="divisor-padrao" id="O_que_e_esg">
 
 
-        <h2 id="O_que_e_esg">O que é ESG?</h2>
+        <h2>O que é ESG?</h2>
 
         <p>ESG significa Environmental, Social and Governance — em
         português, Ambiental, Social e Governança.
@@ -119,17 +106,16 @@
         meio ambiente e a sociedade.
         </p>
 
-        <hr class="divisor-padrao">
+
+        <hr class="divisor-padrao" id="ESG_sigla">
 
 
-        <h2 id="ESG_sigla">Sigla ESG</h2>
+        <h2>Sigla ESG</h2>
 
         <div>
             <img src="IMAGENS/pilares3.jpg" alt="Os 3 pilares" class="imagem-pilares">
         </div>
         
-        
-
         <h2>E - Ambiental (Environmental)</h2>
 
         <p>O pilar Ambiental avalia como a organização impacta o meio ambiente e de que forma integra práticas
@@ -142,7 +128,7 @@
         </p>
         
         <p>Exemplos de ações ambientais:</p>
-        <ul type="square" class="lista-pilares" style="color: #004918;">
+        <ul class="lista-pilares">
             <li><strong>Mudanças climáticas:</strong> implementação de políticas para reduzir impactos e emissões globais.</li>
             <li><strong>Emissões de carbono:</strong> monitoramento e compensação da pegada de carbono corporativa.</li>
             <li><strong>Poluição do ar e da água:</strong> controle e tratamento de efluentes e gases poluentes.</li>
@@ -165,7 +151,7 @@
         </p>
 
         <p>Exemplos de práticas sociais:</p>
-        <ul type="square" class="lista-pilares" style="color: #004918;">
+        <ul class="lista-pilares">
             <li><strong>Diversidade e inclusão:</strong> políticas que valorizam gênero, raça, etnia, idade e acessibilidade.</li>
             <li><strong>Direitos humanos:</strong> garantia de condições dignas de trabalho e combate a práticas discriminatórias.</li>
             <li><strong>Engajamento comunitário:</strong> apoio a projetos sociais, culturais e educacionais nas comunidades locais.</li>
@@ -187,7 +173,7 @@
         </p>
 
         <p>Exemplos de boas práticas de governança:</p>
-        <ul type="square" class="lista-pilares" style="color: #004918;">
+        <ul class="lista-pilares">
             <li><strong>Transparência:</strong> divulgação clara de relatórios financeiros e resultados.</li>
             <li><strong>Conformidade legal:</strong> cumprimento das leis, normas e políticas internas, evitando irregularidades.</li>
             <li><strong>Conselhos independentes:</strong> participação de membros que garantem decisões imparciais.</li>
@@ -198,12 +184,13 @@
             <li><strong>Responsabilidade legal e regulatória:</strong> cumprimento das leis e normas vigentes.</li>
         </ul>
 
-        <hr class="divisor-padrao">
+
+        <hr class="divisor-padrao" id="Aplicando">
 
 
-        <h2 id="Aplicando">ESG na prática</h2>
+        <h2>ESG na prática</h2>
         <p>Implementar o ESG exige planejamento e comprometimento, mas pode começar com passos simples e evoluir de forma gradual.</p>
-        <ul type="square" class="lista-praticas" style="color: #004918;">
+        <ul type="square" class="lista-praticas">
             <li><strong>Diagnóstico:</strong> observe o que a empresa já faz nas áreas ambiental, social e de 
             governança. Avalie pontos fortes e o que precisa ser aprimorado, como uso de recursos, políticas 
             internas e impacto na comunidade.</li>
@@ -235,11 +222,11 @@
         social, ética e ambiental a colaboradores, clientes e sociedade.
         </p>
 
-        <hr class="divisor-padrao">
+        <hr class="divisor-padrao" id="Objetivo_do_esg">
 
 
         <div class="container-objetivo">
-            <h2 id="Objetivo_do_esg">Objetivo do ESG</h2>
+            <h2>Objetivo do ESG</h2>
             <img src="IMAGENS/objetivo.png" alt="" class="img-objetivo">
             
             <p>O principal objetivo do ESG é promover o desenvolvimento
@@ -256,10 +243,11 @@
             </p>
         </div>
 
-        <hr class="divisor-padrao">
+
+        <hr class="divisor-padrao" id="beneficio">
 
 
-        <h2 id="beneficio">Benefícios para as empresas</h2>
+        <h2>Benefícios para as empresas</h2>
         <p>Empresas que investem em boas práticas ESG facilitam o
             caminho para atrair investimentos, fortalecer sua marca e
             reduzir custos operacionais.
@@ -278,10 +266,12 @@
             eficientes, inovadoras e resilientes frente às mudanças do
             mercado.
         </p>
-        <hr class="divisor-padrao">
 
 
-        <h2 id="conclusao">Conclusão</h2>
+        <hr class="divisor-padrao" id="conclusao">
+
+
+        <h2>Conclusão</h2>
         <p>O ESG representa uma nova forma de pensar o papel das
             empresas na sociedade.
             Mais do que uma tendência global, é uma estratégia
@@ -299,16 +289,14 @@
 
     </main>
 
-    <footer>
-        <div class="botao-sobre">
-            <a href="sobre.html" target="_self">Sobre os Desenvolvedores</a>
-        </div>   
-
-        div
-        <strong class="direitos">&copy;2025 CM</strong> 
+    <footer> 
+        <div class="direitos">
+            <strong>&copy;2025 CM - Camila e Maylon</strong> 
+        </div>
     </footer>
 
     <script src="progressoScroll.js"></script>
+    <script src="indice.js"></script>
 </body>
 
 </html>

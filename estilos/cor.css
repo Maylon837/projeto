@@ -1,8 +1,18 @@
 :root{
+    /* GERAL */
     --cor-padrao-site: #004918;
+    --cor-fundo-indice: #fff;
+
+    /* TITULOS/TEXTOS */
     --cor-titulos: #004918;
+    
+
+    /* DETALHES */
+    --cor-btn-indice: #004918;
+    --cor-fundo-botao-cadastro: white;
     --cor-linha-divisao: #004918;
-    --cor-fundo-sumario: #fff;
-    --cor-botao-titulo: #004918;
+    --cor-fundo-linha-progresso:grey;
+    --cor-progresso-barra:#04991d;
+    --cor-rodape:#004918;
    
 }

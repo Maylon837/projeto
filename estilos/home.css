@@ -39,7 +39,7 @@ header {
     text-decoration: none;
     color: var(--cor-botao-titulo);
     letter-spacing: 1px;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .cadastro:hover {
@@ -284,6 +284,50 @@ main p {
 }
 
 
+/* footer */
+footer {
+    text-align:right;
+    width: 100%;
+    margin-top: 100px;
+    padding: 35px 0px;
+    background-color: var(--cor-padrao-site);
+    color: white;
+}
 
+.botao-sobre > button {
+    margin: 0 15px;
+    padding: 6px 6px;
+    border-radius: 8px;
+    border: white;
+}
 
+.botao-sobre a {
+    text-decoration: none;
+    color: white;
+}
 
+.botao-sobre 
+.direitos{
+    padding: 30px;
+}
+
+/*  
+.cadastro {
+    margin: 0px 20px;
+    border-radius: 10px;
+    padding: 7px 15px;
+    background-color: rgb(252, 252, 252);
+
+}
+
+.cadastro a {
+    text-decoration: none;
+    color: var(--cor-botao-titulo);
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+
+.cadastro:hover {
+    background-color: rgb(103, 196, 152);
+}
+*/

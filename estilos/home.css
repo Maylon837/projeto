@@ -2,17 +2,19 @@
 
 
 body {
-    margin: 2px;
+    margin: 0 1px;
 }
 
 /*CABECALHO*/
 header {
     display: flex;
-    justify-content: space-between;
-    padding: 0px 20px;
-    align-items: center;
+    position: fixed;
+    width: 100%;
     background-color: var(--cor-padrao-site);
-
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* garante que o cabeçalho fique acima do outros elementos*/
+    
 }
 
 .logo {
@@ -26,16 +28,18 @@ header {
 
 /*BOTAO CADASTRO*/
 .cadastro {
+    margin: 0px 20px;
     border-radius: 10px;
-    padding: 7px 20px;
+    padding: 7px 15px;
     background-color: rgb(252, 252, 252);
 
 }
 
 .cadastro a {
     text-decoration: none;
-    color: #013009;
+    color: var(--cor-botao-titulo);
     letter-spacing: 1px;
+    font-size: 1.2em;
 }
 
 .cadastro:hover {
@@ -43,13 +47,74 @@ header {
 }
 
 
-/*SUMARIO*/
+
+/* INDICE CABECALHO*/
+/* ARRUMAR O BOTAO COLOCANDO A ESQUERDA AO LADO DA LOGO. ARRUMAR OS INDICES QUE ESTÃO UM AO LADO DO OUTRO EM VEZ DE ESTAR EMBAIXO. */
+.indice-navegacao ul {
+    list-style: none; /*limpa os marcadores de lista ul*/
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.item-indice {
+    position: relative;
+}
+
+.botao-indice {
+    display: block;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(252, 252, 252);
+    text-decoration: none;
+    color: var(--cor-botao-titulo);
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+.painel-indice {
+    /* Propriedades para esconder o menu */
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    min-width: 250px; 
+    background-color: #212121; /* Fundo escuro */
+    z-index: 20; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+   
+}
+
+.painel-indice li a {
+    color: white; 
+    padding: 12px 15px;
+    display: block;
+}
+
+.painel-indice li a:hover {
+    background-color: #333;
+}
+
+/* REGRA CHAVE SEM JS: MOSTRAR AO PASSAR O MOUSE */
+.item-indice:hover > .painel-indice {
+    display: block;
+}
+
+/* Estilo de destaque do botão quando o menu está aberto */
+.item-indice.ativo > .botao-indice {
+    background-color: #212121;
+    color: white;
+}
+
+
+/*SUMARIO FIXO*/
 .sumario-fixo {
     position: fixed;
     top: 135px;
     width: 270px;
     padding: 12px;
-    background-color: white;
+    background-color: var(--cor-fundo-sumario);
     border: 4px solid var(--cor-padrao-site);
     border-radius: 3px;
 
@@ -78,6 +143,8 @@ header {
     color: #04991d;
     text-decoration: underline;
 }
+
+
 
 
 /*MAIN*/
@@ -110,7 +177,7 @@ main p {
 /*introdução*/
 .imagem-principal {
     max-width: 100%;
-    margin-top: 13px;
+    margin-top: 50px;
 }
 
 .p-unico {
@@ -138,6 +205,9 @@ main p {
     padding: 7px 0px;
 }
 
+.lista-pilares strong {
+    color: var(--cor-titulos);
+}
 
 /*ESG na prática*/
 .lista-praticas {
@@ -151,6 +221,9 @@ main p {
     padding: 7px 0px;
 }
 
+.lista-praticas strong {
+    color: var(--cor-titulos);
+}
 
 /*objetivo do esg*/
 .container-objetivo {
@@ -192,21 +265,25 @@ main p {
     margin: 25px 0px;
 }
 
-
-/*RESPONSIVIDADE*/
-/*caixas*/
-@media (max-width: 768px) {
-    .caixas-esg {
-        flex-direction: column;
-    }
+/* linha de progresso */
+.progresso-container {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: grey;
+    z-index: 9999;
 }
 
-/*textos */
-@media (max-width: 768px) {
-    .container-objetivo {
-        flex-direction: column;
-        /* Empilha as colunas verticalmente */
-        gap: 0;
-    }
+#progressoBarra {
+    height: 5px;
+    background: #04991d;
+    width: 0%;
+    transition: width 0.1s ease-out;  /* adiciona um movimento, uma transição*/
 }
+
+
+
+
 

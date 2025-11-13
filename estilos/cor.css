@@ -1,5 +1,8 @@
 :root{
-    --cor-padrao-site: #094C0B;
-    --cor-titulos: rgb(22, 88, 2);
-    --cor-linha-divisao: rgb(22, 88, 2);
+    --cor-padrao-site: #004918;
+    --cor-titulos: #004918;
+    --cor-linha-divisao: #004918;
+    --cor-fundo-sumario: #fff;
+    --cor-botao-titulo: #004918;
+   
 }

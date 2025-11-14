@@ -2,12 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
 
-* {
-    margin: 0px;
-}
 
-main {
-    padding: 100px 20%;
+/* GERAL */
+body {
+    margin: 0 1px;
 }
 
 /*CABECALHO*/
@@ -22,7 +20,7 @@ header {
     
 }
 
-  
+
 .logo img {
     height: 100px;   
 }
@@ -93,6 +91,7 @@ header {
     background-color: rgb(195, 240, 219);
 }
 
+
 /* linha de progresso */
 .progresso-container {
     position: fixed;
@@ -111,12 +110,11 @@ header {
     transition: width 0.1s ease-out;  /* adiciona um movimento, uma transição*/
 }
 
+
 /* footer */
 footer {
-    position: fixed;
-    text-align:right;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 100px;
     padding: 35px 0px;
     background-color: var(--cor-rodape);
     color: white;
@@ -125,63 +123,4 @@ footer {
 
 .direitos {
     text-align: center;
-}
-
-
-/* CADASTRO */
-p {
-    font-size: 20px;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-#bloco-cadastro {
-    display: inline-flex;
-    margin-top: 120px;
-}
-
-form {
-    background-color: rgba(202, 202, 202, 0.568);
-    padding: 10px;
-    width: 30em;
-    height: 30em;
-    margin-left: 70px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgb(121, 119, 119);
-}
-
-
-h1 {
-    padding: 15px;
-    text-align: center;
-    
-}
-
-label {
-    margin-top: 20px;
-    font-size: 1.5em;
-    letter-spacing: 1px;
-    padding-left: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-select {
-    width: 90%;
-    padding: 8px;
-    margin: 15px 10px;
-    border-radius: 4px;
-    border: 1px solid #5a5a5a;
-}
-
-input[type="submit"] {    
-    width: 90%;
-    margin: 25px 17px;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.3em;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
 }

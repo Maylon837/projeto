@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="./estilos/cadastrar.css">
+    <link rel="stylesheet" href="./estilos/cabecalho.css">
 </head>
 <body>
     
@@ -21,10 +22,10 @@
         </div>
         
         <nav>
-            <a href="index.html" class="home">HOME</a>
-            <a href="paginas/sobre.pag" class="sobre">SOBRE DESENVOLVEDORES</a>
-            <a href="paginas/contato.pag" class="contato">FALE CONOSCO</a>
-            <a href="paginas/cadastro.php" class="btn-cadastro">CADASTRO</a>
+            <a href="index.html" class="home">Home</a>
+            <a href="sobre.html" class="sobre">Sobre Desenvolvedores</a>
+            <a href="faleconosco.html" class="contato">Fale Conosco</a>
+            <a href="#" class="btn-cadastro">Cadastro</a>
         </nav>
 
     </header>
@@ -33,6 +34,7 @@
         <div id="bloco-cadastro">
             <form action="cadastro.php" method="POST">
                 <h1>CADASTRO</h1>
+                <p>Não está cadastrado? Faça seu cadastro aqui:</p>
 
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome">
@@ -46,10 +48,10 @@
                 <input type="submit" value="Cadastrar">
 
             </form>
-        </div>
-        <div id="bloco-login">
+        
             <form action="login.php" method="POST">
                 <h1>LOGIN</h1>
+                <p>Já tem uma conta? Entre aqui:</p>
 
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome">

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
 
+/* GERAL */
 body {
     margin: 0 1px;
 }
@@ -34,25 +35,69 @@ header {
     height: 100px;   
 }
 
-
-/*BOTAO CADASTRO*/
-.cadastro {
-    margin: 0px 20px;
+/*BOTÕES CABECALHO*/
+.home {
+    margin: 0 10px;
+    padding: 3px 8px;
     border-radius: 10px;
-    padding: 3px 15px;
-    background-color: var(--cor-fundo-botao-cadastro);
-
-}
-
-.cadastro a {
-    letter-spacing: 1px;
     text-decoration: none;
     font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
     color: var(--cor-botao-titulo);
     font-family: Figtree, "Arial";
 }
 
-.cadastro:hover {
+.home:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+.sobre {
+    margin: 0 10px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    font-family: Figtree, "Arial";
+}
+
+.sobre:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+.contato {
+    margin: 0 10px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    font-family: Figtree, "Arial";
+}
+
+.contato:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+.btn-cadastro {
+    margin-right: 20px;
+    margin-left: 10px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    font-family: Figtree, "Arial";
+}
+
+.btn-cadastro:hover {
     background-color: rgb(195, 240, 219);
 }
 
@@ -81,13 +126,12 @@ header {
 }
 
 #conteudo-indice h1 {
-    font-family: PT Serif,"Arial";
+    font-family: Figtree, "Arial";
     text-align: center;
     font-size: 40px;
     margin: 10px;
-    padding-top: 20px;
-    letter-spacing: 2px;
-    text-decoration: underline 3px;
+    padding: 10px;
+    letter-spacing: 3px;
     
 }
 

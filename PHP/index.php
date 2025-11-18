@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CM.ESG</title>
-    <link rel="stylesheet" href="./estilos/home.css">
-    <link rel="stylesheet" href="./estilos/cabecalho.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
 
 </head>
 
@@ -15,22 +15,19 @@
     <div class="progresso-container">
         <div class="barra-progresso" id="progressoBarra"></div>
     </div>
- 
-
+    
     <header>
         <div class="logo">
-            <a href="index.html">
-                <img src="./IMAGENS/logo (2).png" alt="Logo CM ESG" href="#index.html">
+             <a href="./index.php">
+                <img src="../IMAGENS/LOGO (2).png" alt="Logo CM ESG" href="#index.php">
             </a>
         </div>
-        
         <nav>
             <a href="#" class="home">Home</a>
-            <a href="sobre.html" class="sobre">Sobre Desenvolvedores</a>
-            <a href="faleconosco.html" class="contato">Fale Conosco</a>
-            <a href="cadastro.php" class="btn-cadastro">Cadastro</a>
+            <a href="./faleconosco.php" class="contato">Fale Conosco</a>
+            <a href="./cadastro.php" class="btn-cadastro">Cadastro</a>
+            <a href="./login.php" class="btn-login">Login</a>
         </nav>
-
     </header>
     
 
@@ -55,7 +52,7 @@
 
     <main>
         
-        <img src="./IMAGENS/principal.png" alt="Imagem principal" class="imagem-principal">
+        <img src="../IMAGENS/principal.png" alt="Imagem principal" class="imagem-principal">
         <h1>ESG: Ambiental, Social e Governança</h1>
 
 
@@ -117,7 +114,7 @@
         <h2>Sigla ESG</h2>
 
         <div>
-            <img src="./IMAGENS/pilares3.jpg" alt="Os 3 pilares" class="imagem-pilares">
+            <img src="../IMAGENS/pilares3.jpg" alt="Os 3 pilares" class="imagem-pilares">
         </div>
         
         <h2>E - Ambiental (Environmental)</h2>
@@ -231,7 +228,7 @@
 
         <div class="container-objetivo">
             <h2>Objetivo do ESG</h2>
-            <img src="./IMAGENS/objetivo.png" alt="" class="img-objetivo">
+            <img src="../IMAGENS/objetivo.png" alt="" class="img-objetivo">
             
             <p>O principal objetivo do ESG é promover o desenvolvimento
             sustentável nas organizações, integrando fatores ambientais,
@@ -289,7 +286,7 @@
             e sustentável — para as empresas, para as pessoas e para o
             planeta.
         </p>
-        <img src="./IMAGENS/conclusao.png" alt="" class="conclusao">
+        <img src="../IMAGENS/conclusao.png" alt="" class="conclusao">
 
     </main>
 
@@ -299,8 +296,8 @@
         </div>
     </footer>
 
-    <script src="progressoScroll.js"></script>
-    <script src="indice.js"></script>
+    <script src="../JS/progressoScroll.js"></script>
+    <script src="../JS/indice.js"></script>
 </body>
 
 </html>

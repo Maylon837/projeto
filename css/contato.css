@@ -1,0 +1,33 @@
+@import url(cor.css);
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
+
+
+* {
+    margin: 0px;
+}
+
+main {
+    padding: 120px;
+}
+
+.main-php {
+    text-align: center;
+}
+
+.title-php {
+    margin-top: 50px;
+    font-family: Fitgree, 'Arial';
+}
+
+.text-php {
+    font-size: 1.3em;
+    padding-top: 15px;
+    letter-spacing: 1px;
+}
+
+.btn-php {
+    padding-top: 30px;
+    font-size: 1.3em;
+    letter-spacing: 1.5px;
+}

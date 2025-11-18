@@ -2,19 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
 
-* {
-    margin: 0px;
-}
-
-main {
-    padding: 100px 20%;
+/* TROUXE O CABEÇALHO AQUI PARA RESOLVER */
+/* GERAL */
+body {
+    margin: 0 1px;
 }
 
 /*CABECALHO*/
 header {
     display: flex;
-    position: fixed;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     width: 100%;
     z-index: 100; /* garante que o cabeçalho fique acima do outros elementos*/
@@ -22,7 +19,7 @@ header {
     
 }
 
-  
+
 .logo img {
     height: 100px;   
 }
@@ -93,30 +90,29 @@ header {
     background-color: rgb(195, 240, 219);
 }
 
-/* linha de progresso */
-.progresso-container {
-    position: fixed;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: var(--cor-fundo-linha-progresso);
-    z-index: 9999;
+.btn-login {
+    margin-right: 20px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    font-family: Figtree, "Arial";
 }
 
-#progressoBarra {
-    height: 5px;
-    background: var(--cor-progresso-barra);
-    width: 0%;
-    transition: width 0.1s ease-out;  /* adiciona um movimento, uma transição*/
+.btn-login:hover {
+    background-color: rgb(195, 240, 219);
 }
+
+
 
 /* footer */
 footer {
-    position: fixed;
-    text-align:right;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 250px;
+    margin-bottom: 0;
     padding: 35px 0px;
     background-color: var(--cor-rodape);
     color: white;
@@ -128,60 +124,71 @@ footer {
 }
 
 
-/* CADASTRO */
-p {
-    font-size: 20px;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-#bloco-cadastro {
-    display: inline-flex;
-    margin-top: 120px;
-}
-
-form {
-    background-color: rgba(202, 202, 202, 0.568);
-    padding: 10px;
-    width: 30em;
-    height: 30em;
-    margin-left: 70px;
+/* FALE CONOSCO */
+main {
+    max-width: 600px;
+    margin: 50px auto;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border: 2px solid #a3a3a3;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgb(121, 119, 119);
+    font-family: Arial, sans-serif;
 }
 
-
-h1 {
-    padding: 15px;
-    text-align: center;
-    
-}
-
-label {
-    margin-top: 20px;
-    font-size: 1.5em;
+h2 {
+    padding-top: 0px;
+    font-size: 2em;
     letter-spacing: 1px;
-    padding-left: 10px;
+    font-family: Figtree, 'Arial';
 }
 
-input[type="text"],
-input[type="email"],
-select {
-    width: 90%;
+p {
+    font-family: Figtree, 'Arial';
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+form label {
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: Figtree, 'Arial';
+}
+
+form input[type="email"],
+form textarea {
+    font-family: Figtree, 'Arial';
+    font-size: 15px;
+    letter-spacing: 1px;
+    width: 100%;
     padding: 8px;
-    margin: 15px 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    border: 1px solid #5a5a5a;
+    box-sizing: border-box; /* Garante que padding e borda fiquem dentro da largura */
 }
 
-input[type="submit"] {    
-    width: 90%;
-    margin: 25px 17px;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.3em;
+form button[type="submit"] {
+    margin-top: 40px;
+    padding: 10px 17px;
     background-color: #007bff;
     color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 17px;
+    font-family: Figtree, 'Arial';
+}
+
+
+.mensagem-sucesso {
+    color: green;
+    padding: 10px;
+    background-color: #e6ffe6;
+    border: 1px solid #ccffcc;
+    border-radius: 4px;
+    display: none; /* Começa oculto */
+    margin-top: 15px;
 }

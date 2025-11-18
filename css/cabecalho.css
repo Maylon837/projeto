@@ -91,6 +91,21 @@ header {
     background-color: rgb(195, 240, 219);
 }
 
+.btn-login {
+    margin-right: 20px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    font-family: Figtree, "Arial";
+}
+
+.btn-login:hover {
+    background-color: rgb(195, 240, 219);
+}
 
 /* linha de progresso */
 .progresso-container {
@@ -114,7 +129,8 @@ header {
 /* footer */
 footer {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 70px;
+    margin-bottom: 0;
     padding: 35px 0px;
     background-color: var(--cor-rodape);
     color: white;

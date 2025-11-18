@@ -12,19 +12,33 @@
         <div class="barra-progresso" id="progressoBarra"></div>
     </div>
     
-    <header>
-        <div class="logo">
-             <a href="./index.php">
-                <img src="../IMAGENS/logo-branca.png" alt="Logo CM ESG" href="#index.php">
-            </a>
-        </div>
+    <header class="logo">
+        <a href="../index.php">
+            <img src="../IMAGENS/logo-branca.png" alt="Logo CM ESG" href="#index.php">
+        </a>
+        
         <nav>
-            <a href="./index.php" class="home">Home</a>
-            <a href="./faleconosco.html" class="contato">Fale Conosco</a>
-            <a href="./cadastro.php" class="btn-cadastro">Cadastro</a>
-            <a href="#" class="btn-login">Login</a>
-        </nav>
-    </header>
+            <a href="index.php" class="Home">Home</a>
+            <a href="faleconosco.html" class="contato">Fale Conosco</a>
+            
+            <?php
+        if (isset($_SESSION['user_id'])): 
+            ?>
+            <div class="menu-perfil">
+                <button id="btn-perfil" onclick="toggleMenu()">
+                    Conta
+                </button>
+                <div id="menu-opcoes" class="menu-perfil-opcoes">
+                    <a href="configuracoes.php" class="menu-perfil-link">Configurações</a>
+                    <a href="logout.php" class="menu-perfil-link">Sair</a>
+                </div>
+            </div>
+            <?php else: ?>
+                <a href="cadastro.php" class="btn-cadastro">Cadastro</a>
+                <a href="login.php" class="btn-login">Login</a>
+                <?php endif; ?>
+            </nav>
+        </header>
 
     <main>
         

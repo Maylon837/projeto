@@ -16,3 +16,9 @@ window.onscroll = function() {
                  barraDeProgresso.style.width = porcentagemLida.toFixed(2) + "%";
             }
         }
+
+function toggleMenu() {
+    var menuOpcoes = document.getElementById("menu-opcoes");
+    
+    menuOpcoes.classList.toggle('active'); 
+}

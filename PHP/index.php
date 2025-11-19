@@ -26,14 +26,12 @@ session_start();
         </a>
 
         <nav>
-            <a href="index.php" class="Home">Home</a>
-            <a href="faleconosco.html" class="contato">Fale Conosco</a>
+            <a href="index.php" class="home">Home</a>
+            <a href="../PHP/faleconosco.html" class="contato">Fale Conosco</a>
 
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="menu-perfil">
-                    <button id="btn-perfil" onclick="toggleMenu()">
-                        Conta
-                    </button>
+                    <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
                         <a href="configuracoes.php" class="menu-perfil-link">Configurações</a>
                         <a href="logout.php" class="menu-perfil-link">Sair</a>

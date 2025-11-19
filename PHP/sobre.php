@@ -18,7 +18,7 @@
     <header>
         <div class="logo">
             <a href="./index.php">
-                <img src="../IMAGENS/logo (2).png" alt="Logo CM ESG" href="#index.html">
+            <img src="../IMAGENS/logo-branca.png" alt="Logo CM ESG" href="#index.php">
             </a>
         </div>
         

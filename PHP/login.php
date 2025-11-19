@@ -18,7 +18,7 @@
         </a>
         
         <nav>
-            <a href="index.php" class="Home">Home</a>
+            <a href="index.php" class="home">Home</a>
             <a href="faleconosco.html" class="contato">Fale Conosco</a>
             
             <?php

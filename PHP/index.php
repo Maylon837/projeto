@@ -28,7 +28,6 @@ session_start();
         <nav>
             <a href="index.php" class="home">Home</a>
             <a href="../PHP/faleconosco.html" class="contato">Fale Conosco</a>
-
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="menu-perfil">
                     <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>

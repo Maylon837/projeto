@@ -111,13 +111,15 @@ header {
 /* footer */
 footer {
     width: 100%;
-    margin-top: 250px;
+    margin-top: 130px;
     margin-bottom: 0;
     padding: 35px 0px;
     background-color: var(--cor-rodape);
-    color: white;
+    letter-spacing: 1px;
     font-family: Figtree, "Arial";
+    color: white;
 }
+
 
 .direitos {
     text-align: center;
@@ -131,22 +133,21 @@ main {
     padding-left: 70px;
     padding-right: 70px;
     padding-top: 20px;
-    padding-bottom: 50px;
-    border: 2px solid #a3a3a3;
+    padding-bottom: 60px;
+    border: 2px solid #007928;
     border-radius: 8px;
-    font-family: Arial, sans-serif;
 }
 
 h2 {
     padding-top: 0px;
     font-size: 2em;
     letter-spacing: 1px;
-    font-family: Figtree, 'Arial';
+    font-family: Oswald, 'Arial';
 }
 
 p {
     font-family: Figtree, 'Arial';
-    font-size: 17px;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 
@@ -154,12 +155,13 @@ form label {
     display: block;
     margin-top: 30px;
     font-weight: bold;
-    font-family: Figtree, 'Arial';
+    letter-spacing: 1px;
+    font-family: Oswald, 'Arial';
 }
 
 form input[type="email"],
 form textarea {
-    font-family: Figtree, 'Arial';
+    font-family: 'Arial';
     font-size: 15px;
     letter-spacing: 1px;
     width: 100%;
@@ -179,16 +181,6 @@ form button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 17px;
-    font-family: Figtree, 'Arial';
+    font-family: Oswald, 'Arial';
 }
 
-
-.mensagem-sucesso {
-    color: green;
-    padding: 10px;
-    background-color: #e6ffe6;
-    border: 1px solid #ccffcc;
-    border-radius: 4px;
-    display: none; /* Começa oculto */
-    margin-top: 15px;
-}

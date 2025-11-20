@@ -35,9 +35,9 @@
 
     </main>
 
-    <footer> 
+    <footer>
         <div class="direitos">
-            <strong>&copy;2025 CM - Camila e Maylon</strong> 
+            <strong>&copy;2025 CM - Todos os direitos reservados</strong>
         </div>
     </footer>
 

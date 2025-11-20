@@ -30,7 +30,7 @@ session_start();
             <a href="../PHP/faleconosco.html" class="contato">Fale Conosco</a>
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="menu-perfil">
-                    <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>
+                    <button id="btn-perfil" class="btn-conta" onclick="toggleMenu()" > Conta </button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
                         <a href="configuracoes.php" class="menu-perfil-link">Configurações</a>
                         <a href="logout.php" class="menu-perfil-link">Sair</a>
@@ -209,7 +209,7 @@ session_start();
                 governança. Avalie pontos fortes e o que precisa ser aprimorado, como uso de recursos, políticas
                 internas e impacto na comunidade.</li>
 
-            <li><strong>Definição de metas:</strong> estabeleça objetivos claros e mensuráveis.<strong>Por exemplo:</strong>
+            <li><strong>Definição de metas:</strong> estabeleça objetivos claros e mensuráveis. <br><strong>Por exemplo:</strong>
                 reduzir o consumo de energia, implantar coleta seletiva, promover diversidade no time ou aumentar a transparência na gestão.</li>
 
             <li><strong>Planejamento de ações:</strong> defina iniciativas práticas e envolva toda a equipe. Isso pode incluir campanhas
@@ -305,7 +305,7 @@ session_start();
 
     <footer>
         <div class="direitos">
-            <strong>&copy;2025 CM - Camila e Maylon</strong>
+            <strong>&copy;2025 CM - Todos os direitos reservados</strong>
         </div>
     </footer>
 

@@ -28,9 +28,11 @@ try {
     }
 } catch (Exception $e) {
     if (strpos($e->getMessage(), "Duplicate entry") !== false) {
-        $mensagem_status = "<div class='mensagem erro'>Erro ao cadastrar: Email já registrado. Tente outro.</div>";
+        $mensagem_status = "<div style= 'color: red; padding: 5px; padding-left: 10px; width: 30em; margin-left: 25px; background-color: rgba(255, 197, 197, 1); border: 1px solid rgb(243, 137, 137); border-radius: 5px;'>
+        Erro ao cadastrar: Email já registrado. Tente outro.</div>";
     } else {
-        $mensagem_status = "<div class='mensagem erro'>Erro ao cadastrar: " . $e->getMessage() . "</div>";
+        $mensagem_status = "<div style= 'color: red; padding: 5px; padding-left: 10px; width: 30em; margin-left: 25px; background-color: rgba(255, 197, 197, 1); border: 1px solid rgb(243, 137, 137); border-radius: 5px;'>
+        Erro ao cadastrar: " . $e->getMessage() . "</div>";
     }
 }
 ?>
@@ -42,9 +44,8 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Projeto ESG</title>
-
-    <link rel="stylesheet" href="../CSS/cadastrar.css">
-    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../css/cadastrar.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
 </head>
 
 <body>
@@ -64,7 +65,7 @@ try {
 
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="menu-perfil">
-                    <button id="btn-perfil" onclick="toggleMenu()" class="home">
+                    <button id="btn-perfil" class="btn-conta" onclick="toggleMenu()" >
                         Conta
                     </button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
@@ -85,36 +86,37 @@ try {
             unset($_SESSION['cadastro_sucesso']);
         ?>
 
-            <div class="bloco-mensagem" style="text-align: center; padding: 50px; border: 1px solid #ccc; max-width: 450px; margin: 80px auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <div class="bloco-mensagem">
                 <h2>Cadastro Concluído!</h2>
-                <p style="margin-bottom: 25px;">Seja bem-vindo(a)! Você agora está logado na sua conta.</p>
+                <p>Seja bem-vindo(a)! Você agora está logado na sua conta.</p>
 
-                <a href="../PHP/index.php" class="btn-principal" style="text-decoration: none; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; font-weight: bold; display: inline-block;">
+                <a href="../PHP/index.php" class="btn-principal">
                     Voltar para a Página Principal
                 </a>
             </div>
-
+            
         <?php } else { ?>
 
             <div id="bloco-cadastro">
                 <form action="cadastro.php" method="POST">
-                    <?php echo $mensagem_status; ?> <h1>CADASTRO</h1>
+                    <h1>CADASTRO</h1>
                     <p>Não está cadastrado? Faça seu cadastro aqui:</p>
 
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" required>
+                    <label for="nome"><strong>Nome:</strong></label>
+                    <input type="text" name="nome" id="nome" required placeholder="Digite seu nome">
 
-                    <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" name="sobrenome" id="sobrenome" required>
+                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required placeholder="Digite seu sobrenome">
 
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" required>
+                    <label for="email"><strong>E-mail:</strong></label>
+                    <input type="email" name="email" id="email" required placeholder="Digite seu e-mail">
 
-                    <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" required>
-
+                    <label for="senha"><strong>Senha:</strong></label>
+                    <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
+                    <?php echo $mensagem_status; ?> 
                     <input type="submit" value="Cadastrar">
-
+                     
+                    
                     <p class="btn-rapido">Já tem um cadastro? <a href="login.php">Faça login.</a></p>
                 </form>
             </div>
@@ -124,7 +126,7 @@ try {
 
     <footer>
         <div class="direitos">
-            <strong>&copy; 2025 CM - Camila e Maylon</strong>
+            <strong>&copy;2025 CM - Todos os direitos reservados</strong>
         </div>
     </footer>
     <script src="../JS/progresscroll.js"></script>

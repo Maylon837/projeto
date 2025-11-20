@@ -26,11 +26,11 @@ p {
 
 }
 
-form {
+.form-login {
     padding: 10px;
     width: 33em;
-    height: 29em;
-    border: 1px solid #ccc;
+    height: 31em;
+    border: 2px solid #007928;
     border-radius: 8px;
 }
 
@@ -38,11 +38,11 @@ form {
 h1 {
     padding: 15px;
     text-align: center;
-    font-family: Figtree, "Arial";
+    font-family: Oswald, 'Arial';
 }
 
 label {
-    font-family: Figtree, "Arial";
+    font-family: Oswald, 'Arial';
     font-size: 1.3em;
     letter-spacing: 1px;
     padding-left: 10px;
@@ -51,6 +51,8 @@ label {
 input[type="email"],
 input[type="password"],
 select {
+    font-family: 'Arial';
+    letter-spacing: 1px;
     width: 90%;
     padding: 10px;
     margin: 15px 10px;
@@ -58,7 +60,8 @@ select {
     border: 1px solid #5a5a5a;
 }
 
-input[type="submit"] {    
+input[type="submit"] {  
+    font-family: Oswald, 'Arial';
     width: 90%;
     margin: 25px 17px;
     padding: 10px;

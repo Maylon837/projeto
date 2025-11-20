@@ -38,7 +38,8 @@ try {
             }
         } else {
             // Usuário não encontrado
-            $mensagem_status = "<div class='mensagem erro'>Erro: Usuário não encontrado com este e-mail.</div>";
+            $mensagem_status = "<div style= 'color: red; padding: 5px; padding-left: 10px; width: 30em; margin-left: 20px; background-color: rgba(255, 197, 197, 1); border: 1px solid rgb(243, 137, 137); border-radius: 5px; font-family: Arial;'>
+            Erro: Usuário não encontrado com este e-mail.</div>";
         }
 
         $stmt->close();
@@ -77,7 +78,7 @@ try {
             if (isset($_SESSION['user_id'])):
             ?>
                 <div class="menu-perfil">
-                    <button id="btn-perfil" onclick="toggleMenu()" class="home">Conta</button>
+                    <button id="btn-perfil" class="btn-conta" onclick="toggleMenu()" >Conta</button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
                         <a href="configuracoes.php" class="menu-perfil-link">Configurações</a>
                         <a href="logout.php" class="menu-perfil-link">Sair</a>
@@ -108,15 +109,15 @@ try {
         <?php } else { ?>
 
             <div id="bloco-login">
-                <form action="login.php" method="POST">
+                <form action="login.php" method="POST" class="form-login">
                     <h1>LOGIN</h1>
                     <p>Faça seu login:</p>
 
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email">
+                    <label for="email"><strong>E-mail:</strong></label>
+                    <input type="email" name="email" id="email" required placeholder="Digite seu e-mail">
 
-                    <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha">
+                    <label for="senha"><strong>Senha:</strong></label>
+                    <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
 
                     <input type="submit" value="Login">
 
@@ -130,7 +131,7 @@ try {
 
     <footer>
         <div class="direitos">
-            <strong>&copy;2025 CM - Camila e Maylon</strong>
+            <strong>&copy;2025 CM - Todos os direitos reservados</strong>
         </div>
     </footer>
 

@@ -1,6 +1,6 @@
 @import url(cor.css);
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
 
 /* GERAL */
 body {
@@ -25,7 +25,7 @@ li {
     padding: 10px ;
     margin-top: 70px;
     z-index: 1000;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
     border: 2px solid var(--cor-padrao-site);
     background-color: var(--cor-fundo-indice);
 }
@@ -40,12 +40,12 @@ li {
 }
 
 #conteudo-indice h1 {
-    font-family: Figtree, "Arial";
-    text-align: center;
-    font-size: 40px;
+    font-family: Oswald, 'Arial';
     margin: 10px;
     padding: 10px;
+    text-align: center;
     letter-spacing: 3px;
+    font-size: 40px;
     
 }
 
@@ -64,7 +64,7 @@ li {
 
 .indice-fechado {
     /* esconde a maior parte, e deixa o botão a vista */
-    transform: translateX(calc(-110% + 35px));
+    transform: translateX(calc(-109% + 35px));
 }
 
 #btn-alternar {
@@ -94,15 +94,15 @@ main h1 {
     letter-spacing: 4px;
     color: var(--cor-titulos);
     font-size: 50px;
-    font-family: PT Serif,"Arial";
+    font-family: Oswald, 'Arial';
 }
 
 main h2 {
     font-size: 45px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     color: var(--cor-titulos);
     margin: 0px;
-    font-family: PT Serif,"Arial";
+    font-family: Oswald,"Arial";
 }
 
 main p {
@@ -146,8 +146,10 @@ main p {
 }
 
 .lista-pilares strong {
+    font-family: Oswald, 'Arial';
     color: var(--cor-titulos);
-    font-size: 1.1em;
+    font-size: 1.2em;
+    letter-spacing: 1px;
 }
 
 
@@ -164,6 +166,9 @@ main p {
 }
 
 .lista-praticas strong {
+    font-family: Oswald, 'Arial';
+    letter-spacing: 1px;
+    font-size: 1.2em;
     color: var(--cor-titulos);
 }
 
@@ -190,6 +195,7 @@ main p {
     height: auto;
     display: block;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 /*divisor das partes*/

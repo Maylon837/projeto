@@ -78,9 +78,10 @@ try {
             if (isset($_SESSION['user_id'])):
             ?>
                 <div class="menu-perfil">
-                    <button id="btn-perfil" class="btn-conta" onclick="toggleMenu()" >Conta</button>
+                    <button id="btn-perfil" onclick="toggleMenu()" class="home">Conta</button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
                         <a href="configuracoes.php" class="menu-perfil-link">Configurações</a>
+                        <a href="excluir_conta.php" class="menu-perfil-link" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível!');">Excluir conta</a>
                         <a href="logout.php" class="menu-perfil-link">Sair</a>
                     </div>
                 </div>
@@ -91,17 +92,18 @@ try {
         </nav>
     </header>
 
+
     <main>
         <?php
         if (isset($_SESSION['login_sucesso']) && $_SESSION['login_sucesso'] === true) {
             unset($_SESSION['login_sucesso']);
         ?>
 
-            <div class="bloco-mensagem" style="text-align: center; padding: 50px; border: 1px solid #ccc; max-width: 450px; margin: 80px auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <div class="bloco-mensagem" style="text-align: center; padding: 50px; border: 1px solid #005214ff; max-width: 450px; margin: 80px auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 75, 19, 0.58);">
                 <h2>Login Realizado com Sucesso!</h2>
                 <p style="margin-bottom: 25px;">Obrigado por fazer seu login. Você agora está logado na sua conta.</p>
 
-                <a href="../PHP/index.php" class="btn-principal" style="text-decoration: none; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; font-weight: bold; display: inline-block;">
+                <a href="../PHP/index.php" class="btn-principal" style="text-decoration: none; padding: 10px 20px; background-color: #007200ff; color: white; border-radius: 5px; font-weight: bold; display: inline-block;">
                     Voltar para a Página Principal
                 </a>
             </div>

@@ -24,15 +24,13 @@ try {
         $_SESSION['user_id'] = $id;
         $_SESSION['email'] = $email;
 
-        $_SESSION['cadastro_sucesso'] = true; // Define uma flag de sucesso
+        $_SESSION['cadastro_sucesso'] = true;
     }
 } catch (Exception $e) {
     if (strpos($e->getMessage(), "Duplicate entry") !== false) {
-        $mensagem_status = "<div style= 'color: red; padding: 5px; padding-left: 10px; width: 30em; margin-left: 25px; background-color: rgba(255, 197, 197, 1); border: 1px solid rgb(243, 137, 137); border-radius: 5px;'>
-        Erro ao cadastrar: Email já registrado. Tente outro.</div>";
+        $mensagem_status = "<div class='mensagem erro'>Erro ao cadastrar: Email já registrado. Tente outro.</div>";
     } else {
-        $mensagem_status = "<div style= 'color: red; padding: 5px; padding-left: 10px; width: 30em; margin-left: 25px; background-color: rgba(255, 197, 197, 1); border: 1px solid rgb(243, 137, 137); border-radius: 5px;'>
-        Erro ao cadastrar: " . $e->getMessage() . "</div>";
+        $mensagem_status = "<div class='mensagem erro'>Erro ao cadastrar: " . $e->getMessage() . "</div>";
     }
 }
 ?>
@@ -65,11 +63,12 @@ try {
 
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="menu-perfil">
-                    <button id="btn-perfil" class="btn-conta" onclick="toggleMenu()" >
+                    <button id="btn-perfil" onclick="toggleMenu()" class="home">
                         Conta
                     </button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
                         <a href="configuracoes.php" class="menu-perfil-link">Configurações</a>
+                        <a href="excluir_conta.php" class="menu-perfil-link" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível!');">Excluir conta</a>
                         <a href="logout.php" class="menu-perfil-link">Sair</a>
                     </div>
                 </div>
@@ -94,7 +93,7 @@ try {
                     Voltar para a Página Principal
                 </a>
             </div>
-            
+
         <?php } else { ?>
 
             <div id="bloco-cadastro">
@@ -113,10 +112,10 @@ try {
 
                     <label for="senha"><strong>Senha:</strong></label>
                     <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
-                    <?php echo $mensagem_status; ?> 
+                    <?php echo $mensagem_status; ?>
                     <input type="submit" value="Cadastrar">
-                     
-                    
+
+
                     <p class="btn-rapido">Já tem um cadastro? <a href="login.php">Faça login.</a></p>
                 </form>
             </div>

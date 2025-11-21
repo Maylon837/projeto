@@ -3,41 +3,34 @@ session_start();
 $mensagem_status = "";
 
 try {
-    // Verifica se o formulário foi submetido
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         include("conexao.php");
 
-        // Captura os dados de login
         $email_form = $_POST["email"];
         $senha_form = $_POST["senha"];
 
-        // 1. Consulta o banco de dados para encontrar o usuário pelo e-mail
         $sql = "SELECT id, senha FROM cadastros WHERE email = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $email_form);
         $stmt->execute();
         $resultado = $stmt->get_result();
 
-        // 2. Verifica se encontrou o usuário
         if ($resultado->num_rows === 1) {
             $usuario = $resultado->fetch_assoc();
-            $senha_hash = $usuario['senha']; // Hash armazenado no banco
+            $senha_hash = $usuario['senha']; 
 
-            // 3. Verifica a senha usando password_verify()
             if (password_verify($senha_form, $senha_hash)) {
 
-                // LOGIN BEM-SUCEDIDO:
-                $_SESSION['user_id'] = $usuario['id']; // Define a sessão
+                $_SESSION['user_id'] = $usuario['id']; 
                 $_SESSION['email'] = $email_form;
-                $_SESSION['login_sucesso'] = true; // Define uma flag de sucesso
+                $_SESSION['login_sucesso'] = true; 
 
             } else {
-                // Senha incorreta
+                
                 $mensagem_status = "<div class='mensagem erro'>Erro: Senha incorreta.</div>";
             }
         } else {
-            // Usuário não encontrado
             $mensagem_status = "<div style= 'color: red; padding: 5px; padding-left: 10px; width: 30em; margin-left: 20px; background-color: rgba(255, 197, 197, 1); border: 1px solid rgb(243, 137, 137); border-radius: 5px; font-family: Arial;'>
             Erro: Usuário não encontrado com este e-mail.</div>";
         }

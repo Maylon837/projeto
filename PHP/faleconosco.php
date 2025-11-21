@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,17 +12,26 @@
 </head>
 <body>
     
-    <header>
-        <div class="logo">
-             <a href="./index.php">
-                <img src="../IMAGENS/logo-branca.png" alt="Logo CM ESG" href="#index.php">
-            </a>
-        </div>
+    <header class="logo">
+        <a href="../index.php">
+            <img src="../IMAGENS/logo-branca.png" alt="Logo CM ESG" href="#index.php">
+        </a>
         <nav>
-            <a href="./index.php" class="home">Home</a>
-            <a href="#" class="contato">Fale Conosco</a>
-            <a href="./cadastro.php" class="btn-cadastro">Cadastro</a>
-            <a href="./login.php" class="btn-login">Login</a>
+            <a href="index.php" class="home">Home</a>
+            <a href="../PHP/faleconosco.html" class="contato">Fale Conosco</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <div class="menu-perfil">
+                    <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>
+                    <div id="menu-opcoes" class="menu-perfil-opcoes">
+                        <a href="configuracao.php" class="menu-perfil-link">Configurações</a>
+                        <a href="excluir_conta.php" class="menu-perfil-link" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível!');" onclick="return confirm()">Excluir conta</a>
+                        <a href="logout.php" class="menu-perfil-link">Sair</a>
+                    </div>
+                </div>
+            <?php else: ?>
+                <a href="cadastro.php" class="btn-cadastro">Cadastro</a>
+                <a href="login.php" class="btn-login">Login</a>
+            <?php endif; ?>
         </nav>
     </header>
     <main>

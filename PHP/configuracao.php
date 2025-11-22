@@ -202,28 +202,6 @@ if (isset($conn)) {
             
             
             
-            <div style="margin-top: 20px; text-align: left; padding: 15px; border: 1px dashed #aaa; border-radius: 5px; display: flex; justify-content: space-between; align-items: center;">
-                
-                <p style="margin: 0; font-weight: bold;">Status Atual:</p>
-                
-                <?php 
-                    $is_active = $usuario_atual['newsletter_ativo'];
-                    $btn_text = $is_active ? "Desativar" : "Ativar";
-                    $btn_color = $is_active ? "#dc3545" : "#17a2b8"; 
-                    $status_text = $is_active ? "<span style='color: green;'>Ativa</span>" : "<span style='color: gray;'>Inativa</span>";
-                ?>
-                
-                <p style="margin: 0;"><?php echo $status_text; ?></p>
-                
-                <form action="configuracao.php" method="POST" style="margin: 0;">
-                    <input type="hidden" name="toggle_newsletter" value="1">
-                    <input type="hidden" name="status_atual" value="<?php echo $is_active; ?>"> 
-                    
-                    <input type="submit" value="<?php echo $btn_text; ?>" 
-                           style="padding: 8px 15px; background-color: <?php echo $btn_color; ?>; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                </form>
-            </div>
-            
             
             
             <div style="margin-top: 20px; text-align: left; padding: 15px; border: 1px dashed #aaa; border-radius: 5px;">

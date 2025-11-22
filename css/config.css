@@ -1,0 +1,180 @@
+@import url(cor.css);
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* GERAL */
+* {
+    font-family: Figtree, 'Arial';
+}
+
+main {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 70vh; 
+    padding: 125px 0;
+}
+
+h2 {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 35px;  
+    letter-spacing: 2px;
+}
+
+h3 {
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+    
+    padding: 5px;
+}
+
+label { 
+    font-size: 1.1em;
+}
+
+
+/* BLOCO DE MENSAGEM ERRO E SUCESSO */
+.bloco-mensagem {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* MENSAGEM DE SUCESSO */
+.sucesso {   
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* MENSAGEM DE ERRO */
+.erro {  
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* BLOCO NEWSLETTER */
+.newsletter {
+    text-align: left; 
+    margin-top: 20px;
+    height: 15em;
+    padding: 25px;
+    border: 1px solid #6e6e6e; 
+    border-radius: 5px;
+}
+
+/* BLOCO DE CONFIGURAÇÕES */
+#bloco-configuracoes {
+    text-align: center; 
+    padding: 30px; 
+    border: 1px solid #ccc; 
+    max-width: 600px; 
+    width: 90%; 
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* FORMULÁRIOS */
+/* NOVO NOME E SOBRENOME */
+#form-nome {
+    text-align: left; 
+    margin-top: 20px;
+    height: 17em;
+    padding: 25px;
+    border: 1px solid #6e6e6e; 
+    border-radius: 5px;
+}
+
+#nome {    
+    width: 97%;
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#sobrenome {  
+    width: 97%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+.input-nome {
+    width: 100%; 
+    padding: 8px;
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    font-size: 15px; 
+    letter-spacing: 2px;
+    cursor: pointer;
+    
+}
+
+/* NOVA SENHA */
+#form-senha {
+    text-align: left; 
+    margin-top: 30px;
+    height: 17em;
+    padding: 25px;
+    border: 1px solid #6e6e6e; 
+    border-radius: 5px;
+}
+
+#senha {  
+    width: 97%;
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+#confirmar-senha {
+    width: 97%;
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+.input-senha {
+    width: 100%; 
+    padding: 8px; 
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 2px; 
+    cursor: pointer;
+    
+}
+
+/* MODO ESCURO */
+.modo-escuro {
+    margin-top: 15px; 
+    text-align: left; 
+    padding-left: 15px;
+    padding-bottom: 20px;
+    border: 1px solid #6e6e6e; 
+    border-radius: 5px;
+}
+
+.acessibilidade {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.modo-escuro label {
+    font-size: 17px;
+}
+

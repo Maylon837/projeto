@@ -28,18 +28,17 @@ try {
 
             } else {
                 
-                $mensagem_status = "<div class='mensagem erro'>Erro: Senha incorreta.</div>";
+                $mensagem_status = "<div class='mensagem-erro'>Erro: Senha incorreta.</div>";
             }
         } else {
-            $mensagem_status = "<div style= 'color: red; padding: 5px; padding-left: 10px; width: 30em; margin-left: 20px; background-color: rgba(255, 197, 197, 1); border: 1px solid rgb(243, 137, 137); border-radius: 5px; font-family: Arial;'>
-            Erro: Usuário não encontrado com este e-mail.</div>";
+            $mensagem_status = "<div class='mensagem-erro'>Erro: Usuário não encontrado com este e-mail.</div>";
         }
 
         $stmt->close();
         $conn->close();
     }
 } catch (Exception $e) {
-    $mensagem_status = "<div class='mensagem erro'>Erro no Login: " . $e->getMessage() . "</div>";
+    $mensagem_status = "<div class='mensagem-erro'>Erro no Login: " . $e->getMessage() . "</div>";
 }
 ?>
 
@@ -92,11 +91,11 @@ try {
             unset($_SESSION['login_sucesso']);
         ?>
 
-            <div class="bloco-mensagem" style="text-align: center; padding: 50px; border: 1px solid #005214ff; max-width: 450px; margin: 80px auto; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 75, 19, 0.58);">
+            <div class="bloco-mensagem">
                 <h2>Login Realizado com Sucesso!</h2>
-                <p style="margin-bottom: 25px;">Obrigado por fazer seu login. Você agora está logado na sua conta.</p>
+                <p>Obrigado por fazer seu login. Você agora está logado na sua conta.</p>
 
-                <a href="../PHP/index.php" class="btn-principal" style="text-decoration: none; padding: 10px 20px; background-color: #007200ff; color: white; border-radius: 5px; font-weight: bold; display: inline-block;">
+                <a href="../PHP/index.php" class="btn-principal">
                     Voltar para a Página Principal
                 </a>
             </div>
@@ -105,7 +104,7 @@ try {
 
             <div id="bloco-login">
                 <form action="login.php" method="POST" class="form-login">
-                    <h1>LOGIN</h1>
+                    <h1>🔓Login</h1>
                     <p>Faça seu login:</p>
 
                     <label for="email"><strong>E-mail:</strong></label>
@@ -113,11 +112,11 @@ try {
 
                     <label for="senha"><strong>Senha:</strong></label>
                     <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
-
+                    <?php echo $mensagem_status; ?>
                     <input type="submit" value="Login">
 
                     <p class="btn-rapido">Não tem um cadastro? <a href="cadastro.php">Faça um cadastro.</a></p>
-                    <?php echo $mensagem_status; ?>
+                    
                 </form>
             </div>
 

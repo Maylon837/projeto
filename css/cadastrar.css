@@ -1,9 +1,10 @@
 @import url(cor.css);
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
 
 * {
     margin: 0px;
+    font-family: Figtree, 'Arial';
 }
 
 main {
@@ -12,7 +13,6 @@ main {
 
 /* CADASTRO */
 p {
-    font-family: Figtree, "Arial";
     font-size: 17px;
     text-align: center;
     padding-bottom: 20px;
@@ -35,14 +35,12 @@ form {
 
 h1 {
     padding: 15px;
-    text-align: center;
-    font-family: Oswald, 'Arial';
     letter-spacing: 2px;
+    text-align: center; 
 }
 
 label {
-    font-family: Oswald, 'Arial';
-    font-size: 1.3em;
+    font-size: 1.2em;
     letter-spacing: 1px;
     padding-left: 10px;
 }
@@ -51,18 +49,16 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 select {
-    font-family: 'Arial';
     letter-spacing: 1px;
     width: 90%;
     padding: 10px;
-    margin: 12px 10px;
+    margin: 15px 10px;
     border-radius: 4px;
     border: 1px solid #5a5a5a;
 }
 
 
 input[type="submit"] {    
-    font-family: Oswald, 'Arial';
     width: 90%;
     margin: 25px 17px;
     padding: 10px;
@@ -70,13 +66,12 @@ input[type="submit"] {
     border-radius: 6px;
     font-size: 1.3em;
     letter-spacing: 2px;
-    background-color: #007bff;
+    background-color: var(--cor-btn-geral);
     color: white;
     cursor: pointer;
 }
 
 .btn-rapido {
-    font-family: Fitgree, "Arial";
     font-size: 1.2em;
 }
 
@@ -101,20 +96,19 @@ input[type="submit"] {
     padding-bottom: 10px;
     font-size: 35px;
     letter-spacing: 1px;
-    font-family: Oswald, 'Arial';
+    
 }
 /* mensagem */
 .bloco-mensagem p {
     margin-bottom: 30px;
     padding-bottom: 10px;
     padding-top: 20px;
-    font-family: Fitgree, 'Arial';
     font-size: 19px;
+    
 }
 
 /* botão de voltar no home */
 .btn-principal {
-    font-family: PT Serif, 'Arial';
     font-size: 15px;
     letter-spacing: 2px;
     text-decoration: none; 
@@ -124,5 +118,16 @@ input[type="submit"] {
     border-radius: 5px; 
     font-weight: bold; 
     display: inline-block;
+    transition: background-color 0.3s;
 }
 
+.mensagem-erro {
+    margin: 0px 10px;
+    width: 92%;
+    padding: 5px;
+    border: 1px solid #ffcccc;
+    border-radius: 4px;
+    color: rgb(204, 2, 2);
+    font-size: 17px;
+    background-color: #ffe6e6;
+}

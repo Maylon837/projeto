@@ -13,12 +13,12 @@ session_start();
 <body>
     
     <header class="logo">
-        <a href="../index.php">
+        <a href="../PHP/index.php">
             <img src="../IMAGENS/logo-branca.png" alt="Logo CM ESG" href="#index.php">
         </a>
         <nav>
-            <a href="index.php" class="home">Home</a>
-            <a href="../PHP/faleconosco.html" class="contato">Fale Conosco</a>
+            <a href="../PHP/index.php" class="home">Home</a>
+            <a href="../PHP/faleconosco.php" class="contato">Fale Conosco</a>
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="menu-perfil">
                     <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>
@@ -40,7 +40,7 @@ session_start();
             id="avaliacaoForm" 
             action="https://submit.jotform.com/submit/253214758609665" 
             method="POST">
-            <h2>Envie sua Avaliação ou Mensagem</h2>
+            <h2>💬Envie sua Avaliação ou Mensagem</h2>
             <p>Preencha o formulário para nos enviar sua avaliação.</p>
 
             <label for="email">Seu E-mail:</label>
@@ -49,18 +49,7 @@ session_start();
             <label for="mensagem">Sua Mensagem/Avaliação:</label>
             <textarea id="mensagem" name="q61_mensagem" rows="6" required placeholder="Deixe sua opinião ou dúvida."></textarea>
 
-            <p id="mensagemSucesso" class="mensagem-sucesso" 
-            style="
-            display: none; /* Começa oculto */
-            margin-top: 15px;
-            margin-bottom: 5px;
-            padding: 10px;
-            border: 1px solid #ccffcc;
-            border-radius: 4px;
-            color: green;
-            font-size: 20px;
-            background-color: #e6ffe6;
-            font-family: Oswald, 'Arial';">
+            <p id="mensagemSucesso" class="mensagem-sucesso">
             ✅ Avaliação enviada com sucesso! Obrigado.</p>
             
             <button type="submit">Enviar Avaliação</button>

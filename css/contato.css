@@ -1,132 +1,16 @@
 @import url(cor.css);
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* TROUXE O CABEÇALHO AQUI PARA RESOLVER */
 /* GERAL */
+* {
+    font-family: Figtree, 'Arial';
+}
+
 body {
     margin: 0 1px;
 }
 
-/*CABECALHO*/
-header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    width: 100%;
-    z-index: 100; /* garante que o cabeçalho fique acima do outros elementos*/
-    background-color: var(--cor-padrao-site);
-    
-}
-
-
-.logo img {
-    height: 100px;   
-}
-
-/*BOTÕES CABECALHO*/
-.home {
-    margin: 0 10px;
-    padding: 7px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1em;
-    letter-spacing: 1px;
-    background-color: var(--cor-fundo-botao-cadastro);
-    color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
-}
-
-.home:hover {
-    background-color: rgb(195, 240, 219);
-}
-
-.sobre {
-    margin: 0 10px;
-    padding: 7px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1em;
-    letter-spacing: 1px;
-    background-color: var(--cor-fundo-botao-cadastro);
-    color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
-}
-
-.sobre:hover {
-    background-color: rgb(195, 240, 219);
-}
-
-.contato {
-    margin: 0 10px;
-    padding: 7px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1em;
-    letter-spacing: 1px;
-    background-color: var(--cor-fundo-botao-cadastro);
-    color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
-}
-
-.contato:hover {
-    background-color: rgb(195, 240, 219);
-}
-
-.btn-cadastro {
-    margin-right: 20px;
-    margin-left: 10px;
-    padding: 7px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1em;
-    letter-spacing: 1px;
-    background-color: var(--cor-fundo-botao-cadastro);
-    color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
-}
-
-.btn-cadastro:hover {
-    background-color: rgb(195, 240, 219);
-}
-
-.btn-login {
-    margin-right: 20px;
-    padding: 7px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1em;
-    letter-spacing: 1px;
-    background-color: var(--cor-fundo-botao-cadastro);
-    color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
-}
-
-.btn-login:hover {
-    background-color: rgb(195, 240, 219);
-}
-
-
-
-/* footer */
-footer {
-    width: 100%;
-    margin-top: 130px;
-    margin-bottom: 0;
-    padding: 35px 0px;
-    background-color: var(--cor-rodape);
-    letter-spacing: 1px;
-    font-family: Figtree, "Arial";
-    color: white;
-}
-
-
-.direitos {
-    text-align: center;
-}
-
-
-/* FALE CONOSCO */
 main {
     max-width: 600px;
     margin: 50px auto;
@@ -142,11 +26,9 @@ h2 {
     padding-top: 0px;
     font-size: 2em;
     letter-spacing: 1px;
-    font-family: Oswald, 'Arial';
 }
 
 p {
-    font-family: Figtree, 'Arial';
     font-size: 18px;
     letter-spacing: 1px;
 }
@@ -156,12 +38,10 @@ form label {
     margin-top: 30px;
     font-weight: bold;
     letter-spacing: 1px;
-    font-family: Oswald, 'Arial';
 }
 
 form input[type="email"],
 form textarea {
-    font-family: 'Arial';
     font-size: 15px;
     letter-spacing: 1px;
     width: 100%;
@@ -181,6 +61,197 @@ form button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 17px;
-    font-family: Oswald, 'Arial';
 }
+
+.mensagem-sucesso {
+    display:none;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccffcc;
+    border-radius: 4px;
+    color: green;
+    font-size: 20px;
+    background-color: #e6ffe6;
+}
+
+
+/*CABECALHO*/
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    z-index: 100; /* garante que o cabeçalho fique acima do outros elementos*/
+    background-color: var(--cor-padrao-site);
+    
+}
+
+.logo img {
+    height: 100px;   
+}
+/*BOTÕES CABECALHO*/
+.home {
+    margin: 0 10px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    
+}
+
+.home:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+.sobre {
+    margin: 0 10px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    
+}
+
+.sobre:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+.contato {
+    margin: 0 10px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    
+}
+
+.contato:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+.btn-cadastro {
+    margin-right: 20px;
+    margin-left: 10px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    
+}
+
+.btn-cadastro:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+.btn-login {
+    margin-right: 20px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    
+}
+
+.btn-login:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+/* BOTÕES CABEÇALHO APÓS O CADASTRO OU LOGIN */
+.btn-conta {
+    margin-right: 30px;
+    margin-left: 10px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 0;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background-color: var(--cor-fundo-botao-cadastro);
+    color: var(--cor-botao-titulo);
+    
+    cursor: pointer;
+}
+
+.menu-perfil {
+    position: relative; /* CRÍTICO: O menu-opcoes se posicionará em relação a ele */
+    display: inline-block;
+    
+}
+
+.menu-perfil-opcoes.active {
+    display: block;       
+}
+
+.menu-perfil-opcoes {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    right: 0; 
+    margin-top: 7px;
+    margin-right: 30px;
+    /* Estilos do botões do menu suspenso*/ 
+    background-color: rgb(255, 255, 255); 
+    min-width: 160px;
+    z-index: 9000;
+    border-radius: 5px;
+    padding: 5px 0;
+} /*botao de config no conta*/
+
+.menu-perfil-opcoes a {
+    display: block; 
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 3px;
+    text-align: left;
+    color: var(--cor-titulos);
+    
+}
+
+.menu-perfil-link {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #161616; /* Cor do texto dos links */
+    font-size: 0.9em;
+} 
+
+.menu-perfil-link:hover {
+    background-color: rgb(195, 240, 219);
+}
+
+/* footer */
+footer {
+    width: 100%;
+    margin-top: 130px;
+    margin-bottom: 0;
+    padding: 35px 0px;
+    background-color: var(--cor-rodape);
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+.direitos {
+    text-align: center;
+}
+
+
+
 

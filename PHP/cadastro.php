@@ -28,9 +28,9 @@ try {
     }
 } catch (Exception $e) {
     if (strpos($e->getMessage(), "Duplicate entry") !== false) {
-        $mensagem_status = "<div class='mensagem erro'>Erro ao cadastrar: Email já registrado. Tente outro.</div>";
+        $mensagem_status = "<div class='mensagem-erro'>Erro ao cadastrar: Email já registrado. Tente outro.</div>";
     } else {
-        $mensagem_status = "<div class='mensagem erro'>Erro ao cadastrar: " . $e->getMessage() . "</div>";
+        $mensagem_status = "<div class='mensagem-erro'>Erro ao cadastrar: " . $e->getMessage() . "</div>";
     }
 }
 ?>
@@ -87,7 +87,7 @@ try {
 
             <div class="bloco-mensagem">
                 <h2>Cadastro Concluído!</h2>
-                <p>Seja bem-vindo(a)! Você agora está logado na sua conta.</p>
+                <p>Seja bem-vindo(a)! Você se cadastrou.</p>
 
                 <a href="../PHP/index.php" class="btn-principal">
                     Voltar para a Página Principal
@@ -98,7 +98,7 @@ try {
 
             <div id="bloco-cadastro">
                 <form action="cadastro.php" method="POST">
-                    <h1>CADASTRO</h1>
+                    <h1>📑Cadastro</h1>
                     <p>Não está cadastrado? Faça seu cadastro aqui:</p>
 
                     <label for="nome"><strong>Nome:</strong></label>

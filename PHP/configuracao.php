@@ -21,7 +21,7 @@ try {
 
 } catch (Exception $e) {
     $mensagem_status = "<div class='bloco-mensagem erro'>Erro ao buscar dados: " . $e->getMessage() . "</div>";
-    $usuario_atual = ['nome' => 'N/A', 'sobrenome' => 'N/A', 'email' => 'N/A', 'newsletter_ativo' => 0];
+    $usuario_atual = ['nome' => '', 'sobrenome' => '', 'email' => '', 'newsletter_ativo' => 0];
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['atualizar_dados'])) {
@@ -115,32 +115,23 @@ if (isset($conn)) {
 <head>
     <meta charset="UTF-8">
     <title>Configurações da Conta</title>
-    <link rel="stylesheet" href="../css/home.css"> 
+    <link rel="stylesheet" href="../css/config.css">
     <link rel="stylesheet" href="../css/cabecalho.css">
-    <style>
-        .bloco-mensagem {
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            text-align: center;
-            font-weight: bold;
-        }
-        .sucesso {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        .erro {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-    </style>
+
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+            .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+            n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+            (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+            ml('account', '1936898');
+
+    </script>
+    
 </head>
 <body>
     
     <header class="logo">
-        <a href="../index.php">
+        <a href="../PHP/index.php">
             <img src="../IMAGENS/logo-branca.png" alt="Logo CM ESG" href="#index.php">
         </a>
         <nav>
@@ -148,10 +139,10 @@ if (isset($conn)) {
             <a href="../PHP/faleconosco.php" class="contato">Fale Conosco</a>
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="menu-perfil">
-                    <button id="btn-perfil" onclick="toggleMenu()" class="home">Conta</button>
+                    <button id="btn-perfil" onclick="toggleMenu()" class="home"> Conta </button>
                     <div id="menu-opcoes" class="menu-perfil-opcoes">
-                        <a href="configuracao.php" class="menu-perfil-link">Configurações</a> 
-                        <a href="excluir_conta.php" class="menu-perfil-link" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível!');">Excluir conta</a>
+                        <a href="configuracao.php" class="menu-perfil-link">Configurações</a>
+                        <a href="excluir_conta.php" class="menu-perfil-link" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível!');" onclick="return confirm()">Excluir conta</a>
                         <a href="logout.php" class="menu-perfil-link">Sair</a>
                     </div>
                 </div>
@@ -161,51 +152,52 @@ if (isset($conn)) {
             <?php endif; ?>
         </nav>
     </header>
-    <main style="display: flex; justify-content: center; align-items: center; min-height: 70vh; padding: 20px 0;">
+
+    <main>
         
-        <div id="bloco-configuracoes" style="text-align: center; padding: 30px; border: 1px solid #ccc; max-width: 600px; width: 90%; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-            <br>
-            <br>
-            <br>
-            <br>
-            <h2>⚙️ Configurações da Conta</h2>
+            
+        <div id="bloco-configuracoes">
+            
+
+            <h2>⚙️Configurações da Conta</h2>
             
             <?php echo $mensagem_status; ?>
             
-            
-            
-            <form action="configuracao.php" method="POST" style="text-align: left; margin-top: 20px;">
+            <div class="newsletter">
+                <div class="ml-embedded" data-form="ekd6Mo"></div>
+            </div>
+            </form>
+            <form action="configuracao.php" method="POST" id="form-nome">
+                <h3>📝Atualizar dados</h3>
                 <input type="hidden" name="atualizar_dados" value="1">
                 
-                <label for="nome">Nome Atual:</label>
-                <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($usuario_atual['nome']); ?>" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+                <label for="nome"><strong>Novo Nome:</strong></label>
+                <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($usuario_atual['nome']); ?>" required placeholder= "Digite o novo nome" >
                 
-                <label for="sobrenome">Sobrenome Atual:</label>
-                <input type="text" name="sobrenome" id="sobrenome" value="<?php echo htmlspecialchars($usuario_atual['sobrenome']); ?>" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+                <label for="sobrenome"><strong>Novo Sobrenome:</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" value="<?php echo htmlspecialchars($usuario_atual['sobrenome']); ?>" required placeholder="Digite o novo sobrenome">
                 
-                <input type="submit" value="Atualizar Dados" style="width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                <input type="submit" value="Atualizar Dados" class="input-nome" >
             </form>
+              
             
-            
-            
-            <form action="configuracao.php" method="POST" style="text-align: left; margin-top: 30px;">
+            <form action="configuracao.php" method="POST" id="form-senha">
+                <h3>🔒Atualizar senha</h3>
                 <input type="hidden" name="atualizar_senha" value="1">
                 
-                <label for="senha">Nova Senha:</label>
-                <input type="password" name="senha" id="senha" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+                <label for="senha"><strong>Nova Senha:</strong></label>
+                <input type="password" name="senha" id="senha" required placeholder="Digite a nova senha">
                 
-                <label for="confirmar_senha">Confirmar Nova Senha:</label>
-                <input type="password" name="confirmar_senha" id="confirmar_senha" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+                <label for="confirmar_senha"><strong>Confirmar Nova Senha:</strong></label>
+                <input type="password" name="confirmar_senha" id="confirmar-senha" required placeholder="Digite a nova senha novamente">
                 
-                <input type="submit" value="Atualizar Senha" style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                <input type="submit" value="Atualizar Senha" class="input-senha" >
             </form>
             
-            
-            
-            
-            
-            <div style="margin-top: 20px; text-align: left; padding: 15px; border: 1px dashed #aaa; border-radius: 5px;">
-                <p><strong>Outras Opções:</strong></p>
+
+            <div class="modo-escuro">
+                <p class="acessibilidade"><strong>Acessibilidade</strong></p>
+                <p><strong>Modo escuro</strong></p>
                 <label><input type="checkbox" name="modo_escuro"> Ativar modo escuro (Em Breve)</label>
             </div>
             
@@ -218,5 +210,6 @@ if (isset($conn)) {
             <strong>&copy; 2025 CM - Todos os direitos reservados</strong>
         </div>
     </footer>
+    <script src="newsletter.js"></script>
     </body>
 </html>

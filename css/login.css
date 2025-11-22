@@ -1,10 +1,9 @@
 @import url(cor.css);
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
-
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 * {
     margin: 0px;
+    font-family: Figtree, 'Arial';
 }
 
 main {
@@ -12,7 +11,7 @@ main {
 }
 
 p {
-    font-family: Figtree, "Arial";
+    
     font-size: 17px;
     text-align: center;
     padding-bottom: 20px;
@@ -38,12 +37,12 @@ p {
 h1 {
     padding: 15px;
     text-align: center;
-    font-family: Oswald, 'Arial';
+    letter-spacing: 2px;
+    
 }
 
 label {
-    font-family: Oswald, 'Arial';
-    font-size: 1.3em;
+    font-size: 1.2em;
     letter-spacing: 1px;
     padding-left: 10px;
 }
@@ -60,8 +59,7 @@ select {
     border: 1px solid #5a5a5a;
 }
 
-input[type="submit"] {  
-    font-family: Oswald, 'Arial';
+input[type="submit"] {   
     width: 90%;
     margin: 25px 17px;
     padding: 10px;
@@ -69,7 +67,7 @@ input[type="submit"] {
     border-radius: 6px;
     font-size: 1.3em;
     letter-spacing: 2px;
-    background-color: #007bff;
+    background-color: var(--cor-btn-geral);
     color: white;
     cursor: pointer;
 }
@@ -77,4 +75,55 @@ input[type="submit"] {
 .btn-rapido {
     padding-top: 10px;
     font-size: 1.2em;
+}
+
+/* MENSAGEM DE ERRO OU SUCESSO */
+.mensagem-erro {
+    margin: 0px 10px;
+    width: 92%;
+    padding: 5px;  
+    border: 1px solid rgb(243, 137, 137); 
+    border-radius: 5px; 
+    color: red; 
+    background-color: #ffe6e6; 
+}
+
+.bloco-mensagem {
+    margin: 120px auto; 
+    padding: 50px;
+    max-width: 450px; 
+    border: 1px solid #005214ff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 75, 19, 0.58);
+    text-align: center; 
+    background-color: #f9f9f9; 
+}
+
+.bloco-mensagem h2 {
+    color: green;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    
+}
+
+.bloco-mensagem p {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    font-size: 19px;
+}
+
+
+.btn-principal {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-decoration: none; 
+    padding: 10px 20px; 
+    background-color: var(--cor-btn-geral); 
+    color: white; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    display: inline-block;
 }

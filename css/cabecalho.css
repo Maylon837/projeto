@@ -1,9 +1,11 @@
 @import url(cor.css);
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /*FONTE P*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*FONTE H**/
-
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* GERAL */
+* {
+    font-family: Figtree, 'Arial';
+}
+
 body {
     margin: 0 1px;
 }
@@ -37,7 +39,6 @@ header {
     letter-spacing: 1px;
     background-color: var(--cor-fundo-botao-cadastro);
     color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
 }
 
 .home:hover {
@@ -54,7 +55,6 @@ header {
     letter-spacing: 1px;
     background-color: var(--cor-fundo-botao-cadastro);
     color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
 }
 
 .contato:hover {
@@ -71,7 +71,6 @@ header {
     letter-spacing: 1px;
     background-color: var(--cor-fundo-botao-cadastro);
     color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
 }
 
 .btn-cadastro:hover {
@@ -87,7 +86,6 @@ header {
     letter-spacing: 1px;
     background-color: var(--cor-fundo-botao-cadastro);
     color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
 }
 
 .btn-login:hover {
@@ -106,7 +104,6 @@ header {
     letter-spacing: 1px;
     background-color: var(--cor-fundo-botao-cadastro);
     color: var(--cor-botao-titulo);
-    font-family: Figtree, "Arial";
     cursor: pointer;
 }
 
@@ -187,7 +184,6 @@ footer {
     background-color: var(--cor-rodape);
     color: white;
     letter-spacing: 1px;
-    font-family: Figtree, "Arial";
 }
 
 .direitos {
